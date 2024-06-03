@@ -91,7 +91,7 @@ body {
 .category-section.hidden {
     display: none;
 }
-
+h2{ font-family: "Danfo", serif !important;color: red;font-size: 3vw;}
 .category-button {
     padding: 10px 20px;
     font-size:3vw;
