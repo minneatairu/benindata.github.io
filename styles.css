@@ -138,7 +138,7 @@ body {
 
     position: fixed;
      z-index: 9999;
-     background-color: red;
+
     left: 0;
     top: 0;
     width: 50%;
@@ -153,6 +153,7 @@ body {
     /* 15% from the top and centered */
     padding: 2rem;
     color: black;
+    background-color: red;
     width: 80%;
     font-size: 5vw;
     font-family: sans-serif;line-height: 0.9;
