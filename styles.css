@@ -48,13 +48,13 @@ body {
     width: 300%; /* Adjust as needed to make scrolling smoother */
     height: 100%;
     animation: scrollLeftRight 20s linear infinite;
+    column-gap: 6rem;
 }
 
 .image-grid img {
-    width: calc(100% - 12rem); /* Adjust width to account for padding */
-    height: calc(100% - 12rem); /* Adjust height to account for padding */
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    padding: 6rem; /* Add 6rem padding around images */
 }
 
 @keyframes scrollLeftRight {
