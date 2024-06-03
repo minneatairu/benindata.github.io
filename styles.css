@@ -19,27 +19,39 @@ body {
 }
 .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    color: white;
-    padding: 20px;
-    opacity: 1;
-    animation: fadeOut 3s ease-in-out forwards;
-    font-family: "Danfo", serif;
-    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
 }
 
-@keyframes fadeOut {
-    0% {
+.overlay-text {
+    font-size: 10rem;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 3s ease-in-out forwards;
+}
+
+#dataset {
+    animation-delay: 3s; /* Delay for the second text to appear */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
         opacity: 1;
     }
-    100% {
-        opacity: 0;
-        display: none;
-    }
 }
+
 
 .image-grid {
     display: grid;
