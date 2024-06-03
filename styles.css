@@ -35,7 +35,6 @@ body {
 }
 #dataset .year {
     font-size: 10vw; /* Smaller font size for the year */
-    display: block;
 }
 #benin {
     font-size: 25vw; /* Full-screen width font size for Benin */
