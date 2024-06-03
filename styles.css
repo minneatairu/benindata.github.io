@@ -34,12 +34,14 @@ body {
     ;     color: white;
     text-align: center;
     opacity: 0;
-    animation: fadeInOut 5s ease-in-out forwards;
-    font-family: "Danfo", serif;line-height: 0.6;
+    animation: fadeInOut 8s ease-in-out forwards;
+    font-family: "Danfo", serif;line-height: 0.3;
 }
 
 #dataset {
-    animation-delay: 3s; /* Delay for the second text to appear */
+    animation-delay: 5s;     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fadeInOut {
