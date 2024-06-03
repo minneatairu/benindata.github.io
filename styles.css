@@ -44,7 +44,7 @@ body {
     margin: 0;
     padding: 0;
     opacity: 0;
-    animation: fadeInOut 10s ease-in-out forwards;  font-family: "Danfo", serif!important;
+    animation: fadeOut 10s ease-in-out forwards;  font-family: "Danfo", serif!important;
 }
 
 #dataset {
@@ -61,12 +61,20 @@ body {
 
 
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 @keyframes fadeInOut {
     0%, 100% {
         opacity: 0;
     }
-    50% {
+    25%, 75% {
         opacity: 1;
     }
 }
