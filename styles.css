@@ -54,7 +54,7 @@ body {
     padding: 0;
     opacity: 0;
     animation: fadeInOut 10s ease-in-out forwards;
-    animation-delay: 5s;  font-family: "Danfo", serif!important;  
+    animation-delay: 5s;  font-family: "Danfo", serif!important;  position: absolute;top: 0;
 }
 
 
