@@ -134,5 +134,4 @@ body {
     transform: translateX(-50%);
     padding: 10px 20px;
     font-size: 30px;
-    cursor: pointer;font-family: "Danfo", serif!important;color:red; border:5px solid red
-}
+    cursor: pointer;font-family: "Danfo", serif!important;color:red; border:5px solid red; background: transparent
