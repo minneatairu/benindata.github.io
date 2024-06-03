@@ -35,4 +35,37 @@ window.onclick = function(event) {
     }
 }
 
+// JavaScript for dragging functionality
+const imageContainer = document.querySelector('.image-container');
+const imageGrid = document.querySelector('.image-grid');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+imageContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    imageContainer.classList.add('active');
+    startX = e.pageX - imageGrid.offsetLeft;
+    scrollLeft = imageGrid.scrollLeft;
+});
+
+imageContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    imageContainer.classList.remove('active');
+});
+
+imageContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    imageContainer.classList.remove('active');
+});
+
+imageContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - imageContainer.offsetLeft;
+    const walk = (x - startX) * 3; // Adjust the speed here
+    imageGrid.scrollLeft = scrollLeft - walk;
+});
+
 });
