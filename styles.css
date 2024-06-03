@@ -24,10 +24,10 @@ body {
 }
 
 .image-row img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: auto;
+    height: 100%;
     margin-right: 10px;
+    margin:2rem;
 }
 
 /* Adjust the animation duration and speed as needed */
