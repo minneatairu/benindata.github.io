@@ -76,8 +76,8 @@ body {
     font-size: 5vw;
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-bottom: 5px solid red;
+    border-radius: 5px;background:transparent
 }
 .category-section {
     position: absolute;
