@@ -29,20 +29,32 @@ body {
     z-index: 10;
 }
 
-.overlay-text {
-    font-size:22vw
-    ;     color: white;
+
+#benin {
+    font-size: 25vw; /* Full-screen width font size for Benin */
+    color: white;
     text-align: center;
+    line-height: 0.8;
+    margin: 0;
+    padding: 0;
     opacity: 0;
-    animation: fadeInOut 8s ease-in-out forwards;
-    font-family: "Danfo", serif;line-height: 0.8;
+    animation: fadeInOut 3s ease-in-out forwards;
 }
 
 #dataset {
-    animation-delay: 5s;     display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 22vw; /* Full-screen width font size for Dataset */
+    color: white;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: fadeInOut 3s ease-in-out forwards;
+    animation-delay: 3s; /* Delay for the second text to appear */
 }
+
+
+
 
 @keyframes fadeInOut {
     0%, 100% {
