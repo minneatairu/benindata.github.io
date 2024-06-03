@@ -67,7 +67,6 @@ body {
     padding: 0;
     opacity: 0;
     animation: fadeInOut 8s ease-in-out forwards;
-    animation-delay: 5s;
     font-family: "Danfo", serif !important;
     position: absolute;
     top: 0;
@@ -91,10 +90,10 @@ body {
 .category-section.hidden {
     display: none;
 }
-h2{ font-family: "Danfo", serif !important;color: red;font-size: 3vw;}
+h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;}
 .category-button {
     padding: 10px 20px;
-    font-size:3vw;
+    font-size:5vw;
     cursor: pointer; font-family: "Danfo", serif !important;
     border: none;
     background-color: red;color:#000;    border-radius: 5px;
