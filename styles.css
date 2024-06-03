@@ -32,7 +32,7 @@ body {
 
 #benin {
     font-size: 25vw; /* Full-screen width font size for Benin */
-    color: white;
+    color: red;
     text-align: center;
     line-height: 0.8;
     margin: 0;
@@ -43,7 +43,7 @@ body {
 
 #dataset {
     font-size: 22vw; /* Full-screen width font size for Dataset */
-    color: white;
+    color: red;
     text-align: center;
     line-height: 1;
     margin: 0;
