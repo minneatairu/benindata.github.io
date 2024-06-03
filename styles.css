@@ -1,38 +1,37 @@
 body {
     margin: 0;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #000;
 }
 
 .image-container {
     display: flex;
-    flex-direction: column;
-
+    overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.image-row {
-    display: flex;
-    width: 100%; /* Make the width double to accommodate the cloned row */
-    height: calc(100% / 3); /* 3 rows */
-    animation: scrollLeft 18000s linear infinite;
-    margin-top: 6rem;
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    width: 300%; /* Adjust as needed to make scrolling smoother */
+    height: 100%;
+    animation: scrollLeftRight 20s linear infinite;
 }
 
-.image-row img {
-    width: 300px;
+.image-grid img {
+    width: 100%;
     height: 100%;
     object-fit: contain;
-    margin: 6rem;
 }
 
-/* Adjust the animation duration and speed as needed */
 @keyframes scrollLeftRight {
     0% {
         transform: translateX(0);
