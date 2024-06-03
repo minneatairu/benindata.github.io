@@ -54,8 +54,8 @@ body {
     opacity: 0;
     animation: fadeInOut 8s ease-in-out forwards;
     animation-delay: 3s;  font-family: "Danfo", serif!important;    display: flex;
-    justify-content: center;
-    align-items: center;
+  
+    align-items: center;justify-content: flex-start;
 }
 
 
