@@ -74,10 +74,9 @@ body {
 .search-field {
     padding: 10px;
     font-size: 5vw;
-    width: 100%;
-    margin-bottom: 10px;
-    border-bottom: 5px solid red;
-    border-radius: 5px;background:transparent
+    width: 100%;border-left:none;border-right:none; border-top: none;
+    border-bottom: 10px solid red;
+    border-radius: 5px;background:transparent;     font-family: "Danfo", serif !important;color:red
 }
 .category-section {
     position: absolute;
