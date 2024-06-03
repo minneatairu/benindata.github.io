@@ -36,7 +36,7 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeInOut 5s ease-in-out forwards;
-    font-family: "Danfo", serif;
+    font-family: "Danfo", serif;line-height: 1;
 }
 
 #dataset {
