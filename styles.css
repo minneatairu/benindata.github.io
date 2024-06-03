@@ -31,7 +31,7 @@ body {
 }
 
 .overlay-text {
-    font-size: 10vw;     color: white;
+    font-size: 90vw;     color: white;
     text-align: center;
     opacity: 0;
     animation: fadeInOut 3s ease-in-out forwards;
