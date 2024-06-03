@@ -143,4 +143,4 @@ button{
     right: 20px;
     padding: 10px 20px;
     font-size: 4vw;
-    cursor: pointer;font-family: "Danfo", serif!important;color:red; border:5px solid red; background: transparent;     z-index: 999;}
+    cursor: pointer;font-family: "Danfo", serif!important;color:red; border:none; background: transparent;     z-index: 999;}
