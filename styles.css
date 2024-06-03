@@ -158,10 +158,9 @@ body {
 
 .button-container button {
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 4vw; color:red;
     cursor: pointer;
     border: none;
-    background-color: white;
     border-radius: 5px;
 }
 
