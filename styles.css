@@ -19,8 +19,8 @@ body {
 
 .image-row {
     display: flex;
-    animation: scrollLeft  linear infinite;
-    transition-duration: 18000ms;
+    flex: 1;
+    animation: scrollLeft 18000s linear infinite;
 }
 
 .image-row img {
