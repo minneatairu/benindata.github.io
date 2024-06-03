@@ -163,7 +163,7 @@ body {
     border: none;
  color:red;
  font-family: "Danfo", serif !important;
-
+background: transparent;
     display: flex;    z-index: 999;
 
 
