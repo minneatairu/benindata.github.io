@@ -158,15 +158,15 @@ body {
 
 .button-container button {
     padding: 10px 20px;
-    font-size: 4vw; color:red;
+    font-size: 4vw;
     cursor: pointer;
     border: none;
+ color:red;
     border-radius: 5px;
+    display: flex;
+
 }
 
-.button-container button i {
-    margin-right: 5px;
-}
 .modal-content {
     margin: 1% auto;
     /* 15% from the top and centered */
