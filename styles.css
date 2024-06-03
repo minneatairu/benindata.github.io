@@ -162,8 +162,9 @@ body {
     cursor: pointer;
     border: none;
  color:red;
-    border-radius: 5px;
-    display: flex;
+
+    display: flex;    z-index: 999;
+
 
 }
 
@@ -190,17 +191,3 @@ body {
 }
 
 
-button {
-    position: absolute;
-    top: 0;
-    border-radius: 50px;
-    right: 20px;
-
-    font-size: 4vw;
-    cursor: pointer;
-    font-family: "Danfo", serif !important;
-    color: red;
-    border: none;
-    background: transparent;
-    z-index: 999;
-}
