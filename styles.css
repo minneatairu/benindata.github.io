@@ -138,7 +138,7 @@ body {
 
     position: fixed;
      z-index: 9999;
-border:5px solid #000;
+
     left: 0;
     top: 0;
     width: 50%;
@@ -169,7 +169,7 @@ border:5px solid #000;
     margin-right: 5px;
 }
 .modal-content {
-
+    border:5px solid #000;
     margin: 1% auto;
     /* 15% from the top and centered */
     padding: 1rem 5%;
