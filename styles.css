@@ -100,8 +100,6 @@ body {
     }
 }
 
-
-/* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
