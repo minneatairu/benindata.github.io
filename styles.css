@@ -56,7 +56,9 @@ body {
     /* Animation duration of 10 seconds */
     font-family: "Danfo", serif !important;
 }
-
+.search-field::placeholder {
+    color: red;
+}
 #dataset {
     font-size: 22vw;
     /* Full-screen width font size for Dataset */
