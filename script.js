@@ -68,4 +68,12 @@ imageContainer.addEventListener('mousemove', (e) => {
     imageGrid.scrollLeft = scrollLeft - walk;
 });
 
+// JavaScript for category section toggle
+const searchBtn = document.getElementById("searchBtn");
+const categorySection = document.getElementById("categorySection");
+
+searchBtn.onclick = function() {
+    categorySection.classList.toggle('hidden');
+}
+
 });
