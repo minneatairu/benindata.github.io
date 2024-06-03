@@ -32,11 +32,14 @@ body {
 }
 
 /* Adjust the animation duration and speed as needed */
-@keyframes scrollLeft {
+@keyframes scrollLeftRight {
     0% {
         transform: translateX(0);
     }
+    50% {
+        transform: translateX(-50%);
+    }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(0);
     }
 }
