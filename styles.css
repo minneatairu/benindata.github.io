@@ -22,6 +22,7 @@ body {
     width: 100%; /* Make the width double to accommodate the cloned row */
     height: calc(100% / 3); /* 3 rows */
     animation: scrollLeft 18000s linear infinite;
+    margin-top: 6rem;
 }
 
 .image-row img {
