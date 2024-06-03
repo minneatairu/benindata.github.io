@@ -57,7 +57,7 @@ body {
     font-family: "Danfo", serif !important;
 }
 .search-field::placeholder {
-    color: red;
+    color: black;
 }
 #dataset {
     font-size: 22vw;
@@ -76,8 +76,7 @@ body {
 .search-field {
     padding: 10px;
     font-size: 5vw;
-    width: 100%;border-left:none;border-right:none; border-top: none;
-    border-bottom: 10px solid red;
+    width: 100%;border:none;background: red;
     border-radius: 5px;background:transparent;     font-family: "Danfo", serif !important;color:red
 }
 .category-section {
