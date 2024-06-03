@@ -85,7 +85,24 @@ body {
     align-items: center;
     gap: 10px;
 }
+.category-button:hover::before,
+.category-button:hover::after {
+    content: '(';
+    position: absolute;
+    color: #000;
+    font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.category-button:hover::after {
+    content: ')';
+    right: 0;
+}
+
+.category-button:hover::before {
+    left: 0;
+}
 
 .category-section.hidden {
     display: none;
