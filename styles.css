@@ -46,7 +46,7 @@ body {
     grid-auto-rows: 1fr;
     width: 300%; /* Adjust as needed to make scrolling smoother */
     height: 100%;
-    animation: scrollLeftRight 20s linear infinite;
+    animation: scrollLeftRight 18000s linear infinite;
 }
 
 .image-grid img {
