@@ -48,7 +48,7 @@ body {
     width: 300%; /* Adjust as needed to make scrolling smoother */
     height: 100%;
     animation: scrollLeftRight 20s linear infinite;
-    column-gap: 6rem;
+   gap: 6rem;
 }
 
 .image-grid img {
