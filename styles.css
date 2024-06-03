@@ -52,7 +52,7 @@ body {
     margin: 0;
     padding: 0;
     opacity: 0;
-    animation: fadeOutDelay 6s ease-in-out forwards;
+    animation: fadeOutDelay 5s ease-in-out forwards;
     /* Animation duration of 10 seconds */
     font-family: "Danfo", serif !important;
 }
@@ -67,7 +67,7 @@ body {
     padding: 0;
     opacity: 0;
     animation: fadeInOut 10s ease-in-out forwards;
-    animation-delay: 6s;
+    animation-delay: 5s;
     font-family: "Danfo", serif !important;
     position: absolute;
     top: 0;
