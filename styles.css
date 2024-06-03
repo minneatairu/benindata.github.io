@@ -30,6 +30,7 @@ body {
     opacity: 1;
     animation: fadeOut 3s ease-in-out forwards;
     font-family: "Danfo", serif;
+    z-index: 3;
 }
 
 @keyframes fadeOut {
