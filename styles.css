@@ -162,6 +162,7 @@ body {
     cursor: pointer;
     border: none;
  color:red;
+ font-family: "Danfo", serif !important;
 
     display: flex;    z-index: 999;
 
