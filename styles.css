@@ -17,6 +17,7 @@ body {
     height: 100%;
 
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -26,30 +27,39 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 10; font-family: "Danfo", serif!important;
+    z-index: 10;
+    font-family: "Danfo", serif !important;
 }
+
 #benin .year {
-    font-size: 10vw; /* Smaller font size for the year */
+    font-size: 10vw;
+    /* Smaller font size for the year */
     display: block;
     margin-top: 30px;
 }
+
 #dataset .year {
-    font-size: 10vw; /* Smaller font size for the year */
+    font-size: 10vw;
+    /* Smaller font size for the year */
 }
+
 #benin {
-    font-size: 25vw; /* Full-screen width font size for Benin */
+    font-size: 25vw;
+    /* Full-screen width font size for Benin */
     color: red;
     text-align: center;
     line-height: 0.8;
     margin: 0;
     padding: 0;
     opacity: 0;
-    animation: fadeOutDelay 7s ease-in-out forwards;  /* Animation duration of 10 seconds */
- font-family: "Danfo", serif!important;
+    animation: fadeOutDelay 7s ease-in-out forwards;
+    /* Animation duration of 10 seconds */
+    font-family: "Danfo", serif !important;
 }
 
 #dataset {
-    font-size: 22vw; /* Full-screen width font size for Dataset */
+    font-size: 22vw;
+    /* Full-screen width font size for Dataset */
     color: red;
     text-align: center;
     line-height: 0.8;
@@ -57,7 +67,10 @@ body {
     padding: 0;
     opacity: 0;
     animation: fadeInOut 10s ease-in-out forwards;
-    animation-delay: 7s;  font-family: "Danfo", serif!important;  position: absolute;top: 0;
+    animation-delay: 7s;
+    font-family: "Danfo", serif !important;
+    position: absolute;
+    top: 0;
 }
 
 
@@ -65,18 +78,25 @@ body {
     0% {
         opacity: 1;
     }
+
     80% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 @keyframes fadeInOut {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
-    25%, 75% {
+
+    25%,
+    75% {
         opacity: 1;
     }
 }
@@ -86,10 +106,11 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 1fr;
-    width: 300%; /* Adjust as needed to make scrolling smoother */
+    width: 300%;
+    /* Adjust as needed to make scrolling smoother */
     height: 100%;
     animation: scrollLeftRight 150s linear infinite;
-   gap: 6rem;
+    gap: 6rem;
 }
 
 .image-grid img {
@@ -102,45 +123,67 @@ body {
     0% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(-50%);
     }
+
     100% {
         transform: translateX(0);
     }
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 30; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9999;
+    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #000;font-family: "Danfo", serif!important;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #000;
+    font-family: "Danfo", serif !important;
 }
 
 .modal-content {
     background-color: #000;
-    margin: 1% auto; /* 15% from the top and centered */
+    margin: 1% auto;
+    /* 15% from the top and centered */
     padding: 20px;
-color:red;
-    width: 80%; font-size: 5vw; font-family: sans-serif;
+    color: red;
+    width: 80%;
+    font-size: 5vw;
+    font-family: sans-serif;
 }
 
 
 .close {
-   position:absolute;top:20px;left:20px;
-    font-size: 28px;color:red;font-family: "Danfo", serif!important;  font-size: 4vw;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    color: red;
+    font-family: "Danfo", serif !important;
+    font-size: 4vw;
 }
 
 
-button{
+button {
     position: absolute;
-    top: 20px;border-radius: 50px;
+    top: 20px;
+    border-radius: 50px;
     right: 20px;
     padding: 10px 20px;
     font-size: 4vw;
-    cursor: pointer;font-family: "Danfo", serif!important;color:red; border:none; background: transparent;     z-index: 999;}
+    cursor: pointer;
+    font-family: "Danfo", serif !important;
+    color: red;
+    border: none;
+    background: transparent;
+    z-index: 999;
+}
