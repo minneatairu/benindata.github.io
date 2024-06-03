@@ -122,8 +122,8 @@ color:#fff;
 
 
 .close {
-    float: right;
-    font-size: 28px;color:red;font-family: "Danfo", serif!important;
+    float: left;
+    font-size: 28px;color:red;font-family: "Danfo", serif!important;  font-size: 4vw;
 }
 
 
@@ -132,5 +132,5 @@ button{
     top: 20px;border-radius: 50px;
     right: 20px;
     padding: 10px 20px;
-    font-size: 5vw;
+    font-size: 4vw;
     cursor: pointer;font-family: "Danfo", serif!important;color:red; border:5px solid red; background: transparent;     z-index: 999;}
