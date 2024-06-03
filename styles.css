@@ -19,7 +19,7 @@ body {
 
 .image-row {
     display: flex;
-    width: 200%; /* Make the width double to accommodate the cloned row */
+    width: 100%; /* Make the width double to accommodate the cloned row */
     height: calc(100% / 3); /* 3 rows */
     animation: scrollLeft 18000s linear infinite;
 }
@@ -27,8 +27,8 @@ body {
 .image-row img {
     width: auto;
     height: 100%;
-    margin-right: 10px;
-    margin:2rem;
+    object-fit: contain;
+    margin-right: 4rem;
 }
 
 /* Adjust the animation duration and speed as needed */
