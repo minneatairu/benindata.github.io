@@ -59,7 +59,7 @@ body {
     grid-auto-rows: 1fr;
     width: 300%; /* Adjust as needed to make scrolling smoother */
     height: 100%;
-    animation: scrollLeftRight 80s linear infinite;
+    animation: scrollLeftRight 150s linear infinite;
    gap: 6rem;
 }
 
