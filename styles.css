@@ -50,7 +50,9 @@ body {
     padding: 0;
     opacity: 0;
     animation: fadeInOut 8s ease-in-out forwards;
-    animation-delay: 3s;  font-family: "Danfo", serif!important;
+    animation-delay: 3s;  font-family: "Danfo", serif!important;    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
