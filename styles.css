@@ -71,7 +71,14 @@ body {
     position: absolute;
     top: 0;
 }
-
+.search-field {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 .category-section {
     position: absolute;
     top: 50%;
