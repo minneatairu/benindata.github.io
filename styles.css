@@ -164,10 +164,11 @@ body {
  color:red;
  font-family: "Danfo", serif !important;
 background: transparent;
-    display: flex;    z-index: 999;
+    display: flex;    z-index: 999;line-height: 1;
 
 
 }
+.material-icons{font-size: 4vw;}
 
 .modal-content {
     margin: 1% auto;
