@@ -40,7 +40,7 @@ div.category-section.hidden{display: none;}
 
 #dataset .year {
     font-size: 10vw;
-    /* Smaller font size for the year */
+ text-transform: uppercase;font-weight: 800;
 }
 @keyframes globalfadeIn {
     from {
@@ -112,7 +112,7 @@ div.button-container {
 .close-btn-book {
     grid-column: span 2;
     text-align: right;
-    cursor: pointer;font-family: "Ojuju", sans-serif !important;font-size: 6VW;    position: absolute;left:20px
+    cursor: pointer;font-family: "Ojuju", sans-serif !important;font-size: 6VW;    position: absolute;left:20px; font-weight: 800;
 }
 .category-section {
     position: absolute;
@@ -157,7 +157,7 @@ h2{ font-family: "Ojuju", sans-serif !important;color: red;font-size: 5vw;    LI
     font-size:15vw; line-height: 1;
     cursor: pointer; font-family: "Ojuju", sans-serif !important;
     border: none;
-    background-color: transparent;color:red;    border-radius: 5px;
+    background-color: transparent;color:red;    border-radius: 5px;font-weight: 800;text-transform: uppercase;
 }
 
 @keyframes fadeOutDelay {
@@ -282,7 +282,7 @@ background: transparent;
     position: absolute;
     top: 0px;
     left: 20px;
-    font-size: 28px;
+    font-size: 28px;font-weight: 800;
     color: red;
     font-family: "Ojuju", sans-serif !important;
     font-size: 6vw;cursor: pointer;line-height: 1;
