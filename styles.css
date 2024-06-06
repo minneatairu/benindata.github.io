@@ -42,6 +42,19 @@ body {
     font-size: 10vw;
     /* Smaller font size for the year */
 }
+@keyframes globalfadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.global-fade-in {
+    opacity: 0; /* Start invisible */
+    animation: globalfadeIn 2s ease-in-out forwards; /* Fade in over 2 seconds */
+}
 
 
 #benin {
