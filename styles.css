@@ -178,10 +178,12 @@ h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;}
     font-family: "Danfo", serif !important;
 }
 button.category-button:hover::after {
-    content: ')';
+    content: ')';    transition: content 0.5s ease-in-out;
+
 }
 button.category-button:hover::before {
-    content: '(';
+    content: '(';    transition: content 0.5s ease-in-out;
+
 }
 
 .button-container {
