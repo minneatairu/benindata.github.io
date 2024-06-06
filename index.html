@@ -16,7 +16,7 @@
     </div>
     <div id="categorySection" class="category-section hidden global-fade-in">
 
-        <h2>DATA Categories</h2>
+        <h2>DATA type</h2>
         <button class="category-button">Portraits</button>
         <button class="category-button">Figures</button>
         <button class="category-button">Adornment</button>
@@ -80,6 +80,14 @@
     </div>
 
     <script src="script.js"></script>
+    <script> document.getElementById('bookBtn').addEventListener('click', function() {
+        var bookList = document.getElementById('bookList');
+        if (bookList.style.display === 'none' || bookList.style.display === '') {
+            bookList.style.display = 'block';
+        } else {
+            bookList.style.display = 'none';
+        }
+    });</script>
 
 </body>
 </html>
