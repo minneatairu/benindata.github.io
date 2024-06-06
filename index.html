@@ -48,9 +48,8 @@
 
     </div>
 
-    <div class="book-list" id="bookList">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px;">
-            <h2>catalogs</h2>
+    <div id="bookList" class="grid">
+        <h2>catalogs</h2>
             <div><strong>Year</strong></div>
             <div><strong>Date</strong></div>
             <div>1900</div>
@@ -69,7 +68,6 @@
             <div>July 30, 1960</div>
             <div>1965</div>
             <div>August 5, 1965</div>
-        </div>
     </div>
 
 
@@ -81,10 +79,10 @@
     </div>
 
     <script src="script.js"></script>
-    <script> document.getElementById('bookBtn').addEventListener('click', function() {
+    <script>   document.getElementById('bookBtn').addEventListener('click', function() {
         var bookList = document.getElementById('bookList');
         if (bookList.style.display === 'none' || bookList.style.display === '') {
-            bookList.style.display = 'block';
+            bookList.style.display = 'grid';
         } else {
             bookList.style.display = 'none';
         }

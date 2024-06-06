@@ -121,7 +121,12 @@ div.button-container {
     align-items: center;
     gap: 10px; 
 }
-
+.grid-book {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
 
 
 h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;    LINE-HEIGHT: 1;
