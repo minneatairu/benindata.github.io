@@ -112,7 +112,7 @@ div.button-container {
 .close-btn-book {
     grid-column: span 2;
     text-align: right;
-    cursor: pointer;font-family: "Danfo", serif !important;font-size: 5VW;    position: absolute;top:0
+    cursor: pointer;font-family: "Danfo", serif !important;font-size: 6VW;    position: absolute;top:20px;left:20px
 }
 .category-section {
     position: absolute;
