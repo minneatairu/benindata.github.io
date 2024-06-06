@@ -124,7 +124,8 @@ div.button-container {
 
 
 
-h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;}
+h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;    LINE-HEIGHT: 1;
+    MARGIN-BLOCK-END: 0;}
 .category-button {
 
     font-size:15vw; line-height: 1;
