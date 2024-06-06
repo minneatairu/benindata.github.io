@@ -177,6 +177,8 @@ h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;}
     overflow: auto;
     font-family: "Danfo", serif !important;
 }
+button.category-button::after:hover{content: ')';}
+button.category-button::before:hover{content: '(';}
 
 .button-container {
     position: absolute;
