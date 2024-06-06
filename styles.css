@@ -327,7 +327,7 @@ a {
     background: transparent;
     display: flex;
     z-index: 999;
-    line-height: 1;
+    line-height: 1;font-weight: 800;
 
 
 }
