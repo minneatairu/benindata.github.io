@@ -53,7 +53,7 @@ div.category-section.hidden{display: none;}
 
 .global-fade-in {
     opacity: 0; /* Start invisible */
-    animation: globalfadeIn 2s ease-in-out forwards; /* Fade in over 2 seconds */
+    animation: globalfadeIn 1s ease-in-out forwards; /* Fade in over 2 seconds */
 }
 
 
