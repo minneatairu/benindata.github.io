@@ -79,14 +79,17 @@
     </div>
 
     <script src="script.js"></script>
-    <script>   document.getElementById('bookBtn').addEventListener('click', function() {
+    <script>  document.getElementById('bookBtn').addEventListener('click', function() {
         var bookList = document.getElementById('bookList');
-        if (bookList.style.display === 'none' || bookList.style.display === '') {
-            bookList.style.display = 'grid';
-        } else {
-            bookList.style.display = 'none';
-        }
-    });</script>
+        bookList.style.display = 'grid';
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        var bookList = document.getElementById('bookList');
+        bookList.style.display = 'none';
+    });
+    
+    </script>
 
 </body>
 </html>
