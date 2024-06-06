@@ -108,7 +108,7 @@ div.button-container {
     width: 100%;border:none;background: red;
     border-radius: 20px;background:transparent;     font-family: "Danfo", serif !important;color:red
 }
-
+.text {font-size: 2vw;}
 .close-btn-book {
     grid-column: span 2;
     text-align: right;
