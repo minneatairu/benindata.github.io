@@ -221,7 +221,7 @@ button.category-button:hover::before {
     display: flex;
     gap: 10px;
 }
-a {color:red}
+a {color:red; text-decoration: underline dashed;}
 .button-container button {
     padding: 10px 20px;
     font-size: 4vw;
