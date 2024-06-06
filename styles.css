@@ -42,6 +42,14 @@ body {
     font-size: 10vw;
     /* Smaller font size for the year */
 }
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
 
 #benin {
     font-size: 24vw;
