@@ -82,7 +82,7 @@ body {
     }
 }
 
-#categorySection {
+div.button-container {
     opacity: 0; /* Start invisible */
     animation: fadeIn 2s ease-in-out 5s forwards; /* Fade in over 2 seconds after a 5-second delay */
 }
