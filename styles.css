@@ -17,7 +17,7 @@ body {
     height: 100%;cursor: grab;
 
 }
-
+div.category-section.hidden{display: none;}
 .overlay {
     position: absolute;
     top: 0;

@@ -8,72 +8,86 @@ document.addEventListener("DOMContentLoaded", function () {
         grid.appendChild(clone);
     });
 
- 
-// Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("modalBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("modalBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+    // JavaScript for category section toggle
+    const searchBtn = document.getElementById("searchBtn");
+    const categorySection = document.getElementById("categorySection");
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+    // Function to close the category section
+    function closeCategorySection() {
+        if (!categorySection.classList.contains('hidden')) {
+            categorySection.classList.add('hidden');
+        }
+    }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // Function to close the modal
+    function closeModal() {
+        if (modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        closeCategorySection();
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
         modal.style.display = "none";
     }
-}
 
-// JavaScript for dragging functionality
-const imageContainer = document.querySelector('.image-container');
-const imageGrid = document.querySelector('.image-grid');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
-let isDown = false;
-let startX;
-let scrollLeft;
+    searchBtn.onclick = function() {
+        closeModal();
+        categorySection.classList.toggle('hidden');
+    }
 
-imageContainer.addEventListener('mousedown', (e) => {
-    isDown = true;
-    imageContainer.classList.add('active');
-    startX = e.pageX - imageGrid.offsetLeft;
-    scrollLeft = imageGrid.scrollLeft;
-});
+    // JavaScript for dragging functionality
+    const imageContainer = document.querySelector('.image-container');
+    const imageGrid = document.querySelector('.image-grid');
 
-imageContainer.addEventListener('mouseleave', () => {
-    isDown = false;
-    imageContainer.classList.remove('active');
-});
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-imageContainer.addEventListener('mouseup', () => {
-    isDown = false;
-    imageContainer.classList.remove('active');
-});
+    imageContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        imageContainer.classList.add('active');
+        startX = e.pageX - imageGrid.offsetLeft;
+        scrollLeft = imageGrid.scrollLeft;
+    });
 
-imageContainer.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - imageContainer.offsetLeft;
-    const walk = (x - startX) * 3; // Adjust the speed here
-    imageGrid.scrollLeft = scrollLeft - walk;
-});
+    imageContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        imageContainer.classList.remove('active');
+    });
 
-// JavaScript for category section toggle
-const searchBtn = document.getElementById("searchBtn");
-const categorySection = document.getElementById("categorySection");
+    imageContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        imageContainer.classList.remove('active');
+    });
 
-searchBtn.onclick = function() {
-    categorySection.classList.toggle('hidden');
-}
-
+    imageContainer.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - imageContainer.offsetLeft;
+        const walk = (x - startX) * 3; // Adjust the speed here
+        imageGrid.scrollLeft = scrollLeft - walk;
+    });
 });
