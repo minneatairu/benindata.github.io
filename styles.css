@@ -147,7 +147,7 @@ p {    margin-block-start: 0;
 .book-item {
 
     font-size: 5vw;color: red; font-family: "Ojuju", sans-serif !important;
-    border-bottom: 10px solid red;
+font-weight: 800;
 }
 
 h2{ font-family: "Ojuju", sans-serif !important;color: red;font-size: 5vw;    LINE-HEIGHT: 1;
