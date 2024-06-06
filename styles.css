@@ -172,7 +172,7 @@ h2{ font-family: "Danfo", serif !important;color: red;font-size: 5vw;}
      z-index: 9999;
 
     top: 0;
-    width: 50%;
+    width: 70%;
     height: 100%;
     overflow: auto;
     font-family: "Danfo", serif !important;
@@ -207,7 +207,6 @@ background: transparent;
     padding: 1rem 5%;
     color: black;
     background-color: red;
-    width: 80%;
     font-size: 4vw;
     font-family: sans-serif;line-height: 0.9;
 }
