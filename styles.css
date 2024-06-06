@@ -234,6 +234,9 @@ background: transparent;
 
 
 }
+.book-list {
+    display: none; /* Initially hide the book list */
+}
 .material-icons{font-size: 4vw;}
 
 .modal-content {

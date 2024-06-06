@@ -90,4 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const walk = (x - startX) * 3; // Adjust the speed here
         imageGrid.scrollLeft = scrollLeft - walk;
     });
+    var bookList = document.getElementById('bookList');
+    if (bookList.style.display === 'none' || bookList.style.display === '') {
+        bookList.style.display = 'block';
+    } else {
+        bookList.style.display = 'none';
+    }
 });
