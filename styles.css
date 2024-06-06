@@ -42,14 +42,7 @@ body {
     font-size: 10vw;
     /* Smaller font size for the year */
 }
-.hidden {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
 
-.visible {
-    opacity: 1;
-}
 
 #benin {
     font-size: 24vw;
@@ -67,6 +60,21 @@ body {
 .search-field::placeholder {
     color: black;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#categorySection {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s ease-in-out 5s forwards; /* Fade in over 2 seconds after a 5-second delay */
+}
+
+
 #dataset {
     font-size: 22vw;
     /* Full-screen width font size for Dataset */
