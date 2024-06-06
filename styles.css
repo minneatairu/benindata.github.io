@@ -344,7 +344,7 @@ a {
     padding: 8%;
     color: red;
     font-size: 4vw;
-    font-family: sans-sans-serif;
+    font-family: "Ojuju", sans-serif !important;
     line-height: 0.9;
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
