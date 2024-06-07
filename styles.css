@@ -314,7 +314,7 @@ button.category-button:hover::before {
 
 a {
     color: red;
-    text-decoration: underline dashed;
+    text-decoration: underline 
 }
 
 .button-container button {
