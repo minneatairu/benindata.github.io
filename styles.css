@@ -30,12 +30,14 @@ div.category-section.hidden {
 
 .image-grid {
     display: flex;
-    flex-wrap: wrap; z-index:30;
+    flex-wrap: wrap;
+    z-index: 30;
 }
 
 .flip-card {
-    width:300px;
-    height: 300px;    z-index: 99999;
+    width: 300px;
+    height: 300px;
+    z-index: 99999;
 }
 
 .flip-card-inner {
@@ -56,19 +58,30 @@ div.category-section.hidden {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;   
+    backface-visibility: hidden;
 }
-.index-number { position: absolute; top: 5px; left: 5px; background: rgba(0, 0, 0, 0.5); color: white; padding: 2px 5px; border-radius: 3px; }
+
+.index-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
 
 .flip-card-front {
     z-index: 99999;
 }
 
 .flip-card-back {
-    transform: rotateY(180deg);   
+    transform: rotateY(180deg);
 }
+
 .caption {
-    color: white;text-align: center;
+    color: white;
+    text-align: center;
 
 }
 
@@ -84,7 +97,11 @@ div.category-section.hidden {
     z-index: 10;
     font-family: "Jaro", sans-serif !important;
 }
-div.overlay-text{z-index: 500;}
+
+div.overlay-text {
+    z-index: 500;
+}
+
 #benin .year {
     font-size: 10vw;
     /* Smaller font size for the year */
