@@ -1,12 +1,35 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
 
-    // Clone the images to create the infinite effect
-    const images = Array.from(grid.children);
-    images.forEach(image => {
-        const clone = image.cloneNode(true);
-        grid.appendChild(clone);
-    });
+    // Fetch data from data.json and populate the grid
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            data.images.forEach(item => {
+                const imageItem = document.createElement('div');
+                imageItem.classList.add('image-item');
+                
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = item.caption;
+
+                const caption = document.createElement('p');
+                caption.textContent = item.caption;
+
+                imageItem.appendChild(img);
+                imageItem.appendChild(caption);
+                grid.appendChild(imageItem);
+            });
+
+            // Clone the images to create the infinite effect
+            const images = Array.from(grid.children);
+            images.forEach(image => {
+                const clone = image.cloneNode(true);
+                grid.appendChild(clone);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
 
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -57,38 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
         closeModal();
         categorySection.classList.toggle('hidden');
     }
-
-    // JavaScript for dragging functionality
-    const imageContainer = document.querySelector('.image-container');
-    const imageGrid = document.querySelector('.image-grid');
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    imageContainer.addEventListener('mousedown', (e) => {
-        isDown = true;
-        imageContainer.classList.add('active');
-        startX = e.pageX - imageGrid.offsetLeft;
-        scrollLeft = imageGrid.scrollLeft;
-    });
-
-    imageContainer.addEventListener('mouseleave', () => {
-        isDown = false;
-        imageContainer.classList.remove('active');
-    });
-
-    imageContainer.addEventListener('mouseup', () => {
-        isDown = false;
-        imageContainer.classList.remove('active');
-    });
-
-    imageContainer.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - imageContainer.offsetLeft;
-        const walk = (x - startX) * 3; // Adjust the speed here
-        imageGrid.scrollLeft = scrollLeft - walk;
-    });
-    
 });
