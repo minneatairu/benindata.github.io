@@ -67,7 +67,7 @@ div.category-section.hidden {
     transform: rotateY(180deg);    z-index: 99999;
 }
 .caption {
-    color: white;
+    color: white;text-align: center;
 
 }
 
