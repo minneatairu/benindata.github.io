@@ -1,6 +1,14 @@
 {
     "images": [
-        { "src": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/4dc924f6-1cc0-484b-11ff-53a560e9ae00/public", "caption": "Caption for image 1" },
-        { "src": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a0aad4e5-0063-4687-0049-216f26234900/public", "caption": "Caption for image 2" },
+        {
+            "src": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/4dc924f6-1cc0-484b-11ff-53a560e9ae00/public",
+            "caption": "Caption for image 1",
+            "tags": ["tag1", "tag2"] 
+        },
+        {
+            "src": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a0aad4e5-0063-4687-0049-216f26234900/public",
+            "caption": "Caption for image 2",
+            "tags": ["tag1", "tag2"] 
+        },
     ]
 }
