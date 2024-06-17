@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 imgBack.alt = item.caption;
 
                 const caption = document.createElement('p');
+                caption.classList.add('caption');
                 caption.textContent = item.caption;
 
                 const tags = document.createElement('p');
