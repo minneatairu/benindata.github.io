@@ -109,4 +109,26 @@ document.addEventListener("DOMContentLoaded", function () {
         closeModal();
         categorySection.classList.toggle('hidden');
     }
+
+
+    // Category buttons click event
+    const categoryButtons = document.querySelectorAll('.category-button');
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const tag = this.getAttribute('data-tag');
+            filterImagesByTag(tag);
+        });
+    });
+
+    function filterImagesByTag(tag) {
+        const images = document.querySelectorAll('.image-item');
+        images.forEach(image => {
+            const tags = image.getAttribute('data-tags').split(',');
+            if (tags.includes(tag)) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    }
 });
