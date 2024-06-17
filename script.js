@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
 
@@ -8,26 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
             data.images.forEach(item => {
                 const imageItem = document.createElement('div');
                 imageItem.classList.add('image-item');
-
-                const flipCard = document.createElement('div');
-                flipCard.classList.add('flip-card');
-
-                const flipCardInner = document.createElement('div');
-                flipCardInner.classList.add('flip-card-inner');
-
-                const flipCardFront = document.createElement('div');
-                flipCardFront.classList.add('flip-card-front');
-
-                const flipCardBack = document.createElement('div');
-                flipCardBack.classList.add('flip-card-back');
-
-                const imgFront = document.createElement('img');
-                imgFront.src = item.frontSrc;
-                imgFront.alt = item.caption;
-
-                const imgBack = document.createElement('img');
-                imgBack.src = item.backSrc;
-                imgBack.alt = item.caption;
+                
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = item.caption;
 
                 const caption = document.createElement('p');
                 caption.textContent = item.caption;
@@ -35,18 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const tags = document.createElement('p');
                 tags.textContent = "Tags: " + item.tags.join(", ");
 
-                flipCardFront.appendChild(imgFront);
-                flipCardBack.appendChild(imgBack);
-
-                flipCardInner.appendChild(flipCardFront);
-                flipCardInner.appendChild(flipCardBack);
-
-                flipCard.appendChild(flipCardInner);
-
-                imageItem.appendChild(flipCard);
+                imageItem.appendChild(img);
                 imageItem.appendChild(caption);
                 imageItem.appendChild(tags);
-
                 grid.appendChild(imageItem);
             });
 
