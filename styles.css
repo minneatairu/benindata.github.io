@@ -30,7 +30,7 @@ div.category-section.hidden {
 
 .image-grid {
     display: flex;
-    flex-wrap: wrap; z-index: 99999;
+    flex-wrap: wrap; z-index: 9999;
 }
 
 .flip-card {
@@ -56,7 +56,7 @@ div.category-section.hidden {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;    z-index: 99999;
+    backface-visibility: hidden;   
 }
 
 .flip-card-front {
@@ -64,7 +64,7 @@ div.category-section.hidden {
 }
 
 .flip-card-back {
-    transform: rotateY(180deg);    z-index: 99999;
+    transform: rotateY(180deg);   
 }
 .caption {
     color: white;text-align: center;
