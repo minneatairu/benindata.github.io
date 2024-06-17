@@ -30,7 +30,7 @@ div.category-section.hidden {
 
 .image-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; z-index: 99999;
 }
 
 .flip-card {
