@@ -5,9 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            data.images.forEach(item => {
+            data.images.forEach((item, index) => {
                 const imageItem = document.createElement('div');
                 imageItem.classList.add('image-item');
+                imageItem.setAttribute('data-tags', item.tags.join(','));
+
+                const indexNumber = document.createElement('div');
+                indexNumber.classList.add('index-number');
+                indexNumber.textContent = index + 1;
 
                 const flipCard = document.createElement('div');
                 flipCard.classList.add('flip-card');
@@ -44,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 flipCard.appendChild(flipCardInner);
 
+                imageItem.appendChild(indexNumber);
                 imageItem.appendChild(flipCard);
                 imageItem.appendChild(caption);
                 imageItem.appendChild(tags);
@@ -109,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
         closeModal();
         categorySection.classList.toggle('hidden');
     }
-
 
     // Category buttons click event
     const categoryButtons = document.querySelectorAll('.category-button');

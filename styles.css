@@ -58,6 +58,7 @@ div.category-section.hidden {
     height: 100%;
     backface-visibility: hidden;   
 }
+.index-number { position: absolute; top: 5px; left: 5px; background: rgba(0, 0, 0, 0.5); color: white; padding: 2px 5px; border-radius: 3px; }
 
 .flip-card-front {
     z-index: 99999;
