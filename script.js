@@ -1,87 +1,111 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const grid = document.querySelector(".image-grid");
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const grid = document.querySelector(".image-grid");
+    // Fetch data from data.json and populate the grid
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            data.images.forEach(item => {
+                const imageItem = document.createElement('div');
+                imageItem.classList.add('image-item');
 
-            // Fetch data from data.json and populate the grid
-            fetch('data.json')
-                .then(response => response.json())
-                .then(data => {
-                    data.images.forEach(item => {
-                        const imageItem = document.createElement('div');
-                        imageItem.classList.add('image-item');
-                        
-                        const img = document.createElement('img');
-                        img.src = item.src;
-                        img.alt = item.caption;
+                const flipCard = document.createElement('div');
+                flipCard.classList.add('flip-card');
 
-                        const caption = document.createElement('p');
-                        caption.textContent = item.caption;
+                const flipCardInner = document.createElement('div');
+                flipCardInner.classList.add('flip-card-inner');
 
-                        const tags = document.createElement('p');
-                        tags.textContent = "Tags: " + item.tags.join(", ");
+                const flipCardFront = document.createElement('div');
+                flipCardFront.classList.add('flip-card-front');
 
-                        imageItem.appendChild(img);
-                        imageItem.appendChild(caption);
-                        imageItem.appendChild(tags);
-                        grid.appendChild(imageItem);
-                    });
+                const flipCardBack = document.createElement('div');
+                flipCardBack.classList.add('flip-card-back');
 
-                    // Clone the images to create the infinite effect
-                    const images = Array.from(grid.children);
-                    images.forEach(image => {
-                        const clone = image.cloneNode(true);
-                        grid.appendChild(clone);
-                    });
-                })
-                .catch(error => console.error('Error fetching data:', error));
+                const imgFront = document.createElement('img');
+                imgFront.src = item.frontSrc;
+                imgFront.alt = item.caption;
 
-            // Get the modal
-            var modal = document.getElementById("myModal");
+                const imgBack = document.createElement('img');
+                imgBack.src = item.backSrc;
+                imgBack.alt = item.caption;
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("modalBtn");
+                const caption = document.createElement('p');
+                caption.textContent = item.caption;
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+                const tags = document.createElement('p');
+                tags.textContent = "Tags: " + item.tags.join(", ");
 
-            // JavaScript for category section toggle
-            const searchBtn = document.getElementById("searchBtn");
-            const categorySection = document.getElementById("categorySection");
+                flipCardFront.appendChild(imgFront);
+                flipCardBack.appendChild(imgBack);
 
-            // Function to close the category section
-            function closeCategorySection() {
-                if (!categorySection.classList.contains('hidden')) {
-                    categorySection.classList.add('hidden');
-                }
-            }
+                flipCardInner.appendChild(flipCardFront);
+                flipCardInner.appendChild(flipCardBack);
 
-            // Function to close the modal
-            function closeModal() {
-                if (modal.style.display === "block") {
-                    modal.style.display = "none";
-                }
-            }
+                flipCard.appendChild(flipCardInner);
 
-            // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-                closeCategorySection();
-                modal.style.display = "block";
-            }
+                imageItem.appendChild(flipCard);
+                imageItem.appendChild(caption);
+                imageItem.appendChild(tags);
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
+                grid.appendChild(imageItem);
+            });
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
+            // Clone the images to create the infinite effect
+            const images = Array.from(grid.children);
+            images.forEach(image => {
+                const clone = image.cloneNode(true);
+                grid.appendChild(clone);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
 
-            searchBtn.onclick = function() {
-                closeModal();
-                categorySection.classList.toggle('hidden');
-            }
-        });
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("modalBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // JavaScript for category section toggle
+    const searchBtn = document.getElementById("searchBtn");
+    const categorySection = document.getElementById("categorySection");
+
+    // Function to close the category section
+    function closeCategorySection() {
+        if (!categorySection.classList.contains('hidden')) {
+            categorySection.classList.add('hidden');
+        }
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        if (modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        closeCategorySection();
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    searchBtn.onclick = function() {
+        closeModal();
+        categorySection.classList.toggle('hidden');
+    }
+});
