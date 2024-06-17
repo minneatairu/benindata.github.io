@@ -68,9 +68,7 @@ div.category-section.hidden {
 }
 .caption {
     color: white;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+
 }
 
 .overlay {
