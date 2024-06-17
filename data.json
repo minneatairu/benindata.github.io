@@ -89,8 +89,34 @@
             "tags": [
                 "figure"
             ]
-        }
+        },
 
+        {
+            "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/48b2f1fc-0e4c-4060-1fb5-45406e9dbd00/public",
+            "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/0fa0ab9a-e2c3-4a98-5256-bf4e654c8200/public",
+            "caption": "Caption for image 2",
+            "tags": [
+                "figure"
+            ]
+        },
+
+        {
+            "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a6a0e28a-8f17-40b1-bfbd-0ea088846100/public",
+            "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/6fd40b2d-534a-47e3-8c55-005155acfa00/public",
+            "caption": "Caption for image 2",
+            "tags": [
+                "figure"
+            ]
+        },
+
+        {
+            "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/d7eca781-55e3-4784-d2ac-aa235a04ce00/public",
+            "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/1c1e41fd-ae95-442c-1299-a4ff41664500/public",
+            "caption": "Caption for image 2",
+            "tags": [
+                "figure"
+            ]
+        }
 
 
     ]
