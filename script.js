@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
 
