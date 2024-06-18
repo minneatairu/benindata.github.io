@@ -234,8 +234,11 @@ div.button-container {
     background: black;border-radius:30px;
     flex: 1;
     padding: 10px;color:red;
-    font-size: 5vw;    border:10px solid red;
+    font-size: 5vw;    border:none;
     font-family: "Jaro", sans-serif !important;font-weight: 800;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    box-shadow: inset 0 5px 60px red;
 
 
 }
@@ -303,6 +306,7 @@ p {
 ::placeholder {
     color: red;
     opacity: 1;font-weight: 800;
+    padding-left: 20px;
 }
 
 .book-item {
