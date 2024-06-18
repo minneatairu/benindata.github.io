@@ -224,10 +224,10 @@ div.button-container {
 }
 
 .search-section input {
-    background: red;
+    background: black;
     flex: 1;
     padding: 10px;
-    font-size: 5vw;    border: none;
+    font-size: 5vw;    border:10px solid red;
     font-family: "Jaro", sans-serif !important;
 
 
@@ -294,7 +294,7 @@ p {
 }
 
 ::placeholder {
-    color: white;
+    color: red;
     opacity: 1; /* Override the default opacity */
 }
 
