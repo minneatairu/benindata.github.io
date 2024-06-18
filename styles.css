@@ -256,10 +256,7 @@ div.button-container {
     margin: 0;
 }
 
-.category-section>div {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .category-button {
     margin: 5px 0;
