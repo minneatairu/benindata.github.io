@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
 
@@ -56,15 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 imageItem.appendChild(tags);
 
                 grid.appendChild(imageItem);
-            });
-
-            // Clone the images to create the infinite effect
-            const images = Array.from(grid.children);
-            images.forEach((image, index) => {
-                if (index < images.length / 2) { // Prevents duplicating the already duplicated images
-                    const clone = image.cloneNode(true);
-                    grid.appendChild(clone);
-                }
             });
         })
         .catch(error => console.error('Error fetching data:', error));
