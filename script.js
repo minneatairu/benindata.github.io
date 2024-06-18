@@ -157,28 +157,42 @@ document.addEventListener("DOMContentLoaded", function () {
     let startX;
     let scrollLeft;
 
-    grid.addEventListener('mousedown', (e) => {
+    function handleMouseDown(e) {
         isDown = true;
         grid.classList.add('active');
         startX = e.pageX - grid.offsetLeft;
         scrollLeft = grid.scrollLeft;
-    });
+    }
 
-    grid.addEventListener('mouseleave', () => {
+    function handleMouseLeave() {
         isDown = false;
         grid.classList.remove('active');
-    });
+    }
 
-    grid.addEventListener('mouseup', () => {
+    function handleMouseUp() {
         isDown = false;
         grid.classList.remove('active');
-    });
+    }
 
-    grid.addEventListener('mousemove', (e) => {
+    function handleMouseMove(e) {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - grid.offsetLeft;
         const walk = (x - startX); // Adjust this value to change the drag speed
         grid.scrollLeft = scrollLeft - walk;
+    }
+
+    grid.addEventListener('mousedown', handleMouseDown);
+    grid.addEventListener('mouseleave', handleMouseLeave);
+    grid.addEventListener('mouseup', handleMouseUp);
+    grid.addEventListener('mousemove', handleMouseMove);
+
+    // Ensure the dragging works on image items as well
+    const imageItems = document.querySelectorAll('.image-item');
+    imageItems.forEach(item => {
+        item.addEventListener('mousedown', handleMouseDown);
+        item.addEventListener('mouseleave', handleMouseLeave);
+        item.addEventListener('mouseup', handleMouseUp);
+        item.addEventListener('mousemove', handleMouseMove);
     });
 });
