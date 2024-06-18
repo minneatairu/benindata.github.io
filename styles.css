@@ -226,7 +226,7 @@ div.button-container {
 
 .caption{    font-family: "Jaro", sans-serif !important;}
 .search-section input {
-    background: black;
+    background: black;border-radius:30px;
     flex: 1;
     padding: 10px;color:red;
     font-size: 5vw;    border:10px solid red;
