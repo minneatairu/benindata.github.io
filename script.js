@@ -38,9 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 caption.classList.add('caption');
                 caption.textContent = item.caption;
 
-                const tags = document.createElement('p');
-                tags.textContent = "Tags: " + item.tags.join(", ");
-
                 flipCardFront.appendChild(imgFront);
                 flipCardBack.appendChild(imgBack);
 
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 imageItem.appendChild(indexNumber);
                 imageItem.appendChild(flipCard);
                 imageItem.appendChild(caption);
-                imageItem.appendChild(tags);
 
                 grid.appendChild(imageItem);
             });
