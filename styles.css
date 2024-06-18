@@ -252,7 +252,7 @@ div.button-container {
 .filter-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 60px;
 }
 
 .category-section h2 {
