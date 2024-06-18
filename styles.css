@@ -66,7 +66,7 @@ div.category-section.hidden {
     top: 5px;
     left: 5px;
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: red;
     padding: 2px 5px;
     border-radius: 3px;
 }
@@ -80,7 +80,7 @@ div.category-section.hidden {
 }
 
 .caption {
-    color: white;
+    color: red;
     text-align: center;
 
 }
