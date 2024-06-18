@@ -3,7 +3,7 @@
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a443e554-d76f-45af-94f2-ba776c2c7300/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/06395bc2-b1d4-4590-4c41-b1b6881a1500/public",
-            "caption": "Caption for image 1",
+            "caption": "Portrait of an Oba",
             "tags": [
                 "Portraits"
             ]
@@ -11,7 +11,7 @@
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/bbd01a6e-f458-4d33-fd89-dc976e575a00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/2c91deb2-c5b9-4f28-b5bb-c28152f0dd00/public",
-            "caption": "Caption for image 1",
+            "caption": "Plaque",
             "tags": [
                 "Figure"
             ]
@@ -20,7 +20,7 @@
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/acaf016f-d3c0-4f50-af18-0d3b76d86000/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/748d3849-2068-4da6-1abc-82391a3ba900/public",
-            "caption": "Caption for image 1",
+            "caption": "Hip Pendant",
             "tags": [
                 "Portraits"
             ]
@@ -94,18 +94,18 @@
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/48b2f1fc-0e4c-4060-1fb5-45406e9dbd00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/0fa0ab9a-e2c3-4a98-5256-bf4e654c8200/public",
-            "caption": "Caption for image 2",
+            "caption": "Bronze Plaque",
             "tags": [
-                "figure"
+                "Figure"
             ]
         },
 
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a6a0e28a-8f17-40b1-bfbd-0ea088846100/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/6fd40b2d-534a-47e3-8c55-005155acfa00/public",
-            "caption": "Caption for image 2",
+            "caption": "Bronze Plaque",
             "tags": [
-                "figure"
+                "Figure"
             ]
         },
 
@@ -114,7 +114,7 @@
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/1c1e41fd-ae95-442c-1299-a4ff41664500/public",
             "caption": "Caption for image 2",
             "tags": [
-                "figure"
+                "Figure"
             ]
         }
 
