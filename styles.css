@@ -68,9 +68,7 @@ div.category-section.hidden {
     position: absolute;
     top: 5px;
     left: 5px;
-    background: rgba(0, 0, 0, 0.5);
     color: red;
-    padding: 2px 5px;
     font-family: "Jaro", sans-serif !important;
 }
 
