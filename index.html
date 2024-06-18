@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Dataset by Minne</title>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,69 +15,50 @@
         <div class="overlay-text" id="dataset"><span class="year">A</span> <br>Dataset by Minne</div>
     </div>
     <div id="categorySection" class="category-section hidden global-fade-in">
-
         <h2>DATA TYPE</h2>
         <button class="category-button" data-tag="Portraits">Portraits</button>
         <button class="category-button" data-tag="Figures">Figures</button>
         <button class="category-button" data-tag="Adornment">Adornment</button>
     </div>
 
-
-    <div class="image-grid">
-
-    </div>
-
+    <div class="image-grid"></div>
 
     <div class="button-container">
         <button id="bookBtn"><i class="material-icons">library_books</i></button>
         <button id="modalBtn"><i class="fas fa-info-circle"></i> ?</button>
         <button id="searchBtn"><i class="material-icons">search</i></button>
-
     </div>
 
     <div id="bookList" class="grid-book global-fade-in">
         <div class="close-btn-book" id="closeBtn">X</div>
-
         <div class="book-item">1917</div>
-        <div class="book-item text"> The Art of Benin: A Catalogue of an Exhibition of the AWF Fuller and Chicago
-            Natural History Museum Collections of Antiquities from Benin</div>
+        <div class="book-item text"> The Art of Benin: A Catalogue of an Exhibition of the AWF Fuller and Chicago Natural History Museum Collections of Antiquities from Benin</div>
         <div class="book-item">1962</div>
         <div class="book-item text">Benin antiquities in the Peabody Museum (Vol. 1)</div>
         <div class="book-item">1990</div>
         <div class="book-item text"> Antique works of art from Benin</div>
         <div class="book-item">1899</div>
-        <div class="book-item text">Antiquities from the City of Benin and from other Parts of West Africa in the
-            British Museum</div>
+        <div class="book-item text">Antiquities from the City of Benin and from other Parts of West Africa in the British Museum</div>
         <div class="book-item">1899</div>
-        <div class="book-item text">Catalogue of ethnological specimens. European and Eastern arms & armour. Prehistoric
-            and other curiosities. W.D. Webster</div>
+        <div class="book-item text">Catalogue of ethnological specimens. European and Eastern arms & armour. Prehistoric and other curiosities. W.D. Webster</div>
         <div class="book-item">1900</div>
-        <div class="book-item text">Catalogue of ethnological specimens. European and Eastern arms & armour. Prehistoric
-            and other curiosities. W.D. Webster</div>
+        <div class="book-item text">Catalogue of ethnological specimens. European and Eastern arms & armour. Prehistoric and other curiosities. W.D. Webster</div>
         <div class="book-item">1901</div>
-        <div class="book-item text">Catalogue of ethnological specimens. European and Eastern arms & armour. Prehistoric
-            and other curiosities. W.D. Webster</div>
-
+        <div class="book-item text">Catalogue of ethnological specimens. European and Eastern arms & armour. Prehistoric and other curiosities. W.D. Webster</div>
     </div>
-
 
     <div id="myModal" class="modal global-fade-in">
         <div class="modal-content">
             <span class="close">X</span>
-            <p>This platform showcases an image dataset of Benin Bronzes compiled by <a href="https://minneatairu.com"
-                    target="_blank"> Minne</a>. All images were scanned from auction catalogs and journals published between
-                1900-1965. The categories listed on this platform are based on my artistic goals for the <a href="https://igun.info">Igun
-                    project</a>, and therefore, do not represent culturally relevant categorizations. <br>
-                <br> This platform is a visual supplement for "Missing Objects"—a 2024 commission by <a
-                    href="https://www.redcat.org/events/studio-2022" target="_blank">The Roy and Edna Disney Center
-                    CalArts Center</a>.
+            <p>This platform showcases an image dataset of Benin Bronzes compiled by <a href="https://minneatairu.com" target="_blank"> Minne</a>. All images were scanned from auction catalogs and journals published between 1900-1965. The categories listed on this platform are based on my artistic goals for the <a href="https://igun.info">Igun project</a>, and therefore, do not represent culturally relevant categorizations. <br>
+                <br> This platform is a visual supplement for "Missing Objects"—a 2024 commission by <a href="https://www.redcat.org/events/studio-2022" target="_blank">The Roy and Edna Disney Center CalArts Center</a>.
             </p>
         </div>
     </div>
 
     <script src="script.js"></script>
-
-    <script>  document.getElementById('bookBtn').addEventListener('click', function () {
+    <script>
+        document.getElementById('bookBtn').addEventListener('click', function () {
             var bookList = document.getElementById('bookList');
             bookList.style.display = 'grid';
         });
@@ -88,9 +67,7 @@
             var bookList = document.getElementById('bookList');
             bookList.style.display = 'none';
         });
-
     </script>
-
 </body>
 
 </html>
