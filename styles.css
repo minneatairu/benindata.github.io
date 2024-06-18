@@ -39,7 +39,6 @@ div.category-section.hidden {
 }
 
 .flip-card {
-    width: 300px;
     height: 300px;
     z-index: 99999;
 }
