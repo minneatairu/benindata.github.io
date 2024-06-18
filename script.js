@@ -119,8 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function filterImages(filterType, tag) {
         const images = document.querySelectorAll('.image-item');
         images.forEach(image => {
-            const filterValue = image.getAttribute(`data-${filterType}`);
-            if (filterValue === tag) {
+            const objectType = image.getAttribute('data-object-type');
+            const material = image.getAttribute('data-material');
+            if ((filterType === 'objectType' && objectType === tag) ||
+                (filterType === 'material' && material === tag)) {
                 image.style.display = 'block';
             } else {
                 image.style.display = 'none';
