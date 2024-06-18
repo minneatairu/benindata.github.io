@@ -488,7 +488,7 @@ a {
 }
 
 .image-grid {
-    display: flex;
+
     flex-wrap: nowrap;
     cursor: grab;
     overflow: hidden; /* Prevents scrollbar from showing */
@@ -498,8 +498,7 @@ a {
 .image-item {
     position: relative;
     margin: 5px;
-    width: 150px;
-    height: 200px;
+
     perspective: 1000px;
     flex: 0 0 auto;
 }
