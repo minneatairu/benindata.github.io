@@ -4,120 +4,92 @@
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a443e554-d76f-45af-94f2-ba776c2c7300/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/06395bc2-b1d4-4590-4c41-b1b6881a1500/public",
             "caption": "Portrait of an Oba",
-            "tags": [
-                "Portraits"
-            ]
+            "objectType": "Portraits",
+            "material": "Bronze"
         },
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/bbd01a6e-f458-4d33-fd89-dc976e575a00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/2c91deb2-c5b9-4f28-b5bb-c28152f0dd00/public",
             "caption": "Plaque",
-            "tags": [
-                "Figure"
-            ]
+            "objectType": "Figure",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/acaf016f-d3c0-4f50-af18-0d3b76d86000/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/748d3849-2068-4da6-1abc-82391a3ba900/public",
             "caption": "Hip Pendant",
-            "tags": [
-                "Portraits"
-            ]
+            "objectType": "Portraits",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/19e3e806-a40c-45f8-2277-712253a2b300/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/6a5dd3fd-6501-496f-82a1-cb84808f9400/public",
             "caption": "Caption for image 1",
-            "tags": [
-                "Figures"
-            ]
+            "objectType": "Figures",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/4dc924f6-1cc0-484b-11ff-53a560e9ae00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/cdf836c4-1dda-4658-b380-0d92dd393000/public",
             "caption": "Caption for image 1",
-            "tags": [
-                "portrait"
-            ]
+            "objectType": "portrait",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a0aad4e5-0063-4687-0049-216f26234900/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/5902988d-c9aa-4ead-ec34-ae00dad50100/public",
             "caption": "Caption for image 2",
-            "tags": [
-                "figure"
-            ]
+            "objectType": "figure",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/48c332a1-4d19-4cf8-42c2-a48acb0ee700/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/139ad0bb-2f2f-4a99-91bf-c8f507325400/public",
             "caption": "Caption for image 2",
-            "tags": [
-                "figure"
-            ]
+            "objectType": "figure",
+            "material": "Bronze"
         },
-
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/65f1fc1b-0719-4d92-5c3f-b204a5f64300/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/374b68d2-78b0-461e-bc7c-9ca901cbd400/public",
             "caption": "Caption for image 2",
-            "tags": [
-                "figure"
-            ]
+            "objectType": "figure",
+            "material": "Bronze"
         },
-
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/eef80192-c573-49a2-8751-a1870d31af00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/12482b5b-9cdd-4076-d2b8-25ce6b702200/public",
             "caption": "Caption for image 2",
-            "tags": [
-                "figure"
-            ]
+            "objectType": "figure",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/05685386-b4f0-4aa1-8ccd-7971a1561000/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/7fdf4c92-98fb-43db-cc43-90323cd72f00/public",
             "caption": "Caption for image 2",
-            "tags": [
-                "figure"
-            ]
+            "objectType": "figure",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/48b2f1fc-0e4c-4060-1fb5-45406e9dbd00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/0fa0ab9a-e2c3-4a98-5256-bf4e654c8200/public",
             "caption": "Bronze Plaque",
-            "tags": [
-                "Figure"
-            ]
+            "objectType": "Figure",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a6a0e28a-8f17-40b1-bfbd-0ea088846100/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/6fd40b2d-534a-47e3-8c55-005155acfa00/public",
             "caption": "Bronze Plaque",
-            "tags": [
-                "Figure"
-            ]
+            "objectType": "Figure",
+            "material": "Bronze"
         },
-
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/d7eca781-55e3-4784-d2ac-aa235a04ce00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/1c1e41fd-ae95-442c-1299-a4ff41664500/public",
             "caption": "Caption for image 2",
-            "tags": [
-                "Figure"
-            ]
+            "objectType": "Figure",
+            "material": "Bronze"
         }
-
-
     ]
 }

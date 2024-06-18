@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             data.images.forEach((item, index) => {
                 const imageItem = document.createElement('div');
                 imageItem.classList.add('image-item');
-                imageItem.setAttribute('data-tags', item.tags.join(','));
+                imageItem.setAttribute('data-object-type', item.objectType);
+                imageItem.setAttribute('data-material', item.material);
 
                 const indexNumber = document.createElement('div');
                 indexNumber.classList.add('index-number');
@@ -109,16 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const categoryButtons = document.querySelectorAll('.category-button');
     categoryButtons.forEach(button => {
         button.addEventListener('click', function () {
+            const filterType = this.getAttribute('data-filter-type');
             const tag = this.getAttribute('data-tag');
-            filterImagesByTag(tag);
+            filterImages(filterType, tag);
         });
     });
 
-    function filterImagesByTag(tag) {
+    function filterImages(filterType, tag) {
         const images = document.querySelectorAll('.image-item');
         images.forEach(image => {
-            const tags = image.getAttribute('data-tags').split(',');
-            if (tags.includes(tag)) {
+            const filterValue = image.getAttribute(`data-${filterType}`);
+            if (filterValue === tag) {
                 image.style.display = 'block';
             } else {
                 image.style.display = 'none';
