@@ -312,7 +312,7 @@ h2 {
 .category-button {
 
     font-size: 10vw;
-    line-height: 1;
+    line-height: 0.8;
     cursor: pointer;
     font-family: "Jaro", sans-serif !important;
     border: none;
