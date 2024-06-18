@@ -9,6 +9,9 @@ body {
     background-color: #000;
 }
 
+.category-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.category-section h2 { grid-column: span 2; }
+
 .image-container {
     display: flex;
     overflow: hidden;
