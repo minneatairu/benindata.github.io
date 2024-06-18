@@ -215,7 +215,8 @@ div.button-container {
     z-index: 50;
 
 }
-
+.category-button .indicator { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); display: none; }
+.category-button.active .indicator { display: block; }
 .search-section {
     width: 100%;
     margin-bottom: 20px;
