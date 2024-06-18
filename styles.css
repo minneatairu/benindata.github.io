@@ -293,6 +293,11 @@ p {
 
 }
 
+::placeholder {
+    color: white;
+    opacity: 1; /* Override the default opacity */
+}
+
 .book-item {
 
     font-size: 5vw;
