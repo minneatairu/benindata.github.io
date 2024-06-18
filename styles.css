@@ -220,15 +220,10 @@ div.button-container {
 
 .category-section {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     z-index: 50;
     padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     gap: 10px;
 }
 
@@ -276,7 +271,7 @@ h2 {
 
 .category-button {
 
-    font-size: 15vw;
+    font-size: 10vw;
     line-height: 1;
     cursor: pointer;
     font-family: "Jaro", sans-serif !important;
