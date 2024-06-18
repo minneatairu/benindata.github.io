@@ -110,22 +110,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const categoryButtons = document.querySelectorAll('.category-button');
     categoryButtons.forEach(button => {
         button.addEventListener('click', function () {
+            this.classList.toggle('active');
             const filterType = this.getAttribute('data-filter-type');
             const tag = this.getAttribute('data-tag');
-            filterImages(filterType, tag);
+            filterImages(filterType, tag, this.classList.contains('active'));
         });
     });
 
-    function filterImages(filterType, tag) {
+    function filterImages(filterType, tag, isActive) {
         const images = document.querySelectorAll('.image-item');
         images.forEach(image => {
             const objectType = image.getAttribute('data-object-type');
             const material = image.getAttribute('data-material');
-            if ((filterType === 'objectType' && objectType === tag) ||
-                (filterType === 'material' && material === tag)) {
-                image.style.display = 'block';
+            if (isActive) {
+                if ((filterType === 'objectType' && objectType === tag) ||
+                    (filterType === 'material' && material === tag)) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
             } else {
-                image.style.display = 'none';
+                image.style.display = 'block'; // Reset display when deselected
             }
         });
     }
