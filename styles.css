@@ -226,7 +226,7 @@ div.button-container {
 .search-section input {
     flex: 1;
     padding: 10px;
-    font-size: 16px;    font-family: "Jaro", sans-serif !important;
+    font-size:5vw;    font-family: "Jaro", sans-serif !important;
 
 }
 
