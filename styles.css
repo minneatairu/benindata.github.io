@@ -227,7 +227,7 @@ div.button-container {
     background: red;
     flex: 1;
     padding: 10px;
-    font-size: 5vw;
+    font-size: 5vw;    border: none;
     font-family: "Jaro", sans-serif !important;
 
 
