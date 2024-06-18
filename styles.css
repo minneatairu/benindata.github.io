@@ -218,7 +218,9 @@ div.button-container {
 .category-border{
     border: 10px solid red;
     border-radius: 30px;
-    padding: 2rem;
+    padding: 2rem;    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    box-shadow: inset 0 5px 60px red;
 }
 .category-button .indicator { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); display: none; }
 .category-button.active .indicator { display: block; }
