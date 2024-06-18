@@ -235,7 +235,7 @@ div.button-container {
     flex: 1;
     padding: 10px;color:red;
     font-size: 5vw;    border:10px solid red;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "Jaro", sans-serif !important;font-weight: 800;
 
 
 }
@@ -302,7 +302,7 @@ p {
 
 ::placeholder {
     color: red;
-    opacity: 1; /* Override the default opacity */
+    opacity: 1;font-weight: 800;
 }
 
 .book-item {
