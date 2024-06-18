@@ -215,29 +215,51 @@ div.button-container {
     z-index: 50;
 
 }
-.category-border{
-    border: 10px solid red;
+
+.category-border {
     border-radius: 30px;
-    padding: 2rem;    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     box-shadow: inset 0 5px 60px red;
 }
-.category-button .indicator { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); display: none; }
-.category-button.active .indicator { display: block; }
+
+.category-button .indicator {
+    position: absolute;
+    top: 28%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: none;
+    font-size: 30px;
+}
+
+.category-button.active .indicator {
+    display: block;
+}
+
 .search-section {
     width: 100%;
     margin-bottom: 20px;
-    display: flex;    border-radius: 20px;    font-family: "Jaro", sans-serif !important;
+    display: flex;
+    border-radius: 20px;
+    font-family: "Jaro", sans-serif !important;
 
 }
 
-.caption{    font-family: "Jaro", sans-serif !important;}
+.caption {
+    font-family: "Jaro", sans-serif !important;
+}
+
 .search-section input {
-    background: black;border-radius:30px;
+    background: black;
+    border-radius: 30px;
     flex: 1;
-    padding: 10px;color:red;
-    font-size: 5vw;    border:none;
-    font-family: "Jaro", sans-serif !important;font-weight: 800;
+    padding: 10px;
+    color: red;
+    font-size: 5vw;
+    border: none;
+    font-family: "Jaro", sans-serif !important;
+    font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     box-shadow: inset 0 5px 60px red;
@@ -307,7 +329,8 @@ p {
 
 ::placeholder {
     color: red;
-    opacity: 1;font-weight: 800;
+    opacity: 1;
+    font-weight: 800;
     padding-left: 20px;
 }
 
