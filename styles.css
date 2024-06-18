@@ -71,7 +71,7 @@ div.category-section.hidden {
     background: rgba(0, 0, 0, 0.5);
     color: red;
     padding: 2px 5px;
-    border-radius: 3px;
+    font-family: "Jaro", sans-serif !important;
 }
 
 .flip-card-front {

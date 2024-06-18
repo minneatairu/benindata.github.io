@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 const imgFront = document.createElement('img');
                 imgFront.src = item.frontSrc;
                 imgFront.alt = item.caption;
-                imgFront.draggable = false; // Disable dragging
 
                 const imgBack = document.createElement('img');
                 imgBack.src = item.backSrc;
                 imgBack.alt = item.caption;
-                imgBack.draggable = false; // Disable dragging
 
                 const caption = document.createElement('p');
                 caption.classList.add('caption');
@@ -54,23 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 imageItem.appendChild(caption);
 
                 grid.appendChild(imageItem);
-            });
-
-            // Ensure the dragging works on image items as well
-            const imageItems = document.querySelectorAll('.image-item');
-            imageItems.forEach(item => {
-                item.addEventListener('mousedown', handleMouseDown);
-                item.addEventListener('mouseleave', handleMouseLeave);
-                item.addEventListener('mouseup', handleMouseUp);
-                item.addEventListener('mousemove', handleMouseMove);
-            });
-
-            // Prevent ghost image while dragging
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('dragstart', (e) => {
-                    e.preventDefault();
-                });
             });
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -205,4 +186,13 @@ document.addEventListener("DOMContentLoaded", function () {
     grid.addEventListener('mouseleave', handleMouseLeave);
     grid.addEventListener('mouseup', handleMouseUp);
     grid.addEventListener('mousemove', handleMouseMove);
+
+    // Ensure the dragging works on image items as well
+    const imageItems = document.querySelectorAll('.image-item');
+    imageItems.forEach(item => {
+        item.addEventListener('mousedown', handleMouseDown);
+        item.addEventListener('mouseleave', handleMouseLeave);
+        item.addEventListener('mouseup', handleMouseUp);
+        item.addEventListener('mousemove', handleMouseMove);
+    });
 });
