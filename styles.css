@@ -9,8 +9,15 @@ body {
     background-color: #000;
 }
 
-.category-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.category-section h2 { grid-column: span 2; }
+.category-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.category-section h2 {
+    grid-column: span 2;
+}
 
 .image-container {
     display: flex;
@@ -189,17 +196,7 @@ div.button-container {
     text-transform: uppercase;
 }
 
-.search-field {
-    padding: 10px;
-    font-size: 5vw;
-    width: 100%;
-    border: none;
-    background: red;
-    border-radius: 20px;
-    background: transparent;
-    font-family: "Jaro", sans-serif !important;
-    color: red
-}
+
 
 .text {
     font-size: 5vw !important;
@@ -223,6 +220,57 @@ div.button-container {
 
     z-index: 50;
 
+}
+
+.search-section {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;    border-radius: 20px;    font-family: "Jaro", sans-serif !important;
+
+}
+
+.search-section input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;    font-family: "Jaro", sans-serif !important;
+
+}
+
+.search-field {
+    padding: 10px;
+    font-size: 5vw;
+    width: 100%;
+    border: none;
+    background: red;
+
+
+    color: red
+}
+
+.search-section button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.category-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.category-section h2 {
+    margin: 0;
+}
+
+.category-section>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
 }
 
 p {
