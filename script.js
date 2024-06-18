@@ -129,4 +129,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchButton.addEventListener('click', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        const images = document.querySelectorAll('.image-item');
+        images.forEach(image => {
+            const caption = image.querySelector('.caption').textContent.toLowerCase();
+            if (caption.includes(searchTerm)) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    });
 });
