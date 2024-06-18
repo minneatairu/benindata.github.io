@@ -215,6 +215,11 @@ div.button-container {
     z-index: 50;
 
 }
+.category-border{
+    border: 10px solid red;
+    border-radius: 30px;
+    padding: 2rem;
+}
 .category-button .indicator { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); display: none; }
 .category-button.active .indicator { display: block; }
 .search-section {
