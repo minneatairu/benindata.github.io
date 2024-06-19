@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.querySelector(".overlay");
     setTimeout(() => {
         overlay.classList.add('hidden');
-    }, 5000);
+    }, 3000);
 
     // Fetch data from data.json and populate the grid
     fetch('data.json')
