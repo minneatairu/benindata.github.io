@@ -26,8 +26,9 @@ div.category-section.hidden {
 
 
 .flip-card {
-    height:100%;
-    z-index: 99999; padding:0 2rem
+    height: 100%;
+    z-index: 99999;
+    padding: 0 2rem
 }
 
 .flip-card-inner {
@@ -72,6 +73,7 @@ div.category-section.hidden {
     text-align: center;
 
 }
+
 .image-container {
     display: flex;
     overflow: hidden;
@@ -80,21 +82,24 @@ div.category-section.hidden {
     height: 100%;
     cursor: grab;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 .image-item::before {
     content: "";
     position: absolute;
-    top: -0.5rem; /* Adjust this value to match the gap */
+    top: -0.5rem;
+    /* Adjust this value to match the gap */
     left: 0;
     right: 0;
     height: 1px;
     background-color: red;
 }
 
-.image-item:nth-child(-n+3)::before { /* Adjust this selector for the first row items */
-    top: 0; /* Remove the top offset for the first row */
+.image-item:nth-child(-n+3)::before {
+    /* Adjust this selector for the first row items */
+    top: 0;
+    /* Remove the top offset for the first row */
 }
 
 .overlay {
@@ -107,7 +112,10 @@ div.category-section.hidden {
     align-items: center;
     flex-direction: column;
     z-index: 1000;
-    font-family: "Jaro", sans-serif !important;    transition: opacity 1s ease-out;    height: 100%;    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Jaro", sans-serif !important;
+    transition: opacity 1s ease-out;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     box-shadow: inset 0 5px 60px red;
 
@@ -191,12 +199,13 @@ div.button-container {
 
 .image-count {
     position: fixed;
- top: 100px;
-right: 20px;
+    top: 100px;
+    right: 20px;
     color: red;
     padding: 10px;
     border-radius: 5px;
-    z-index: 100;    font-family: "Jaro", sans-serif !important;
+    z-index: 100;
+    font-family: "Jaro", sans-serif !important;
 
 }
 
@@ -242,11 +251,14 @@ right: 20px;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;display: flex;
-    flex-direction: column;text-align: left;
+    box-shadow: inset 0 5px 60px red;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.category-button .indicator {  font-family: "Jaro", sans-serif !important;
+.category-button .indicator {
+    font-family: "Jaro", sans-serif !important;
     position: absolute;
     top: 28%;
     right: 20px;
@@ -274,7 +286,8 @@ right: 20px;
 
 .search-section input {
     background: black;
-    border-radius: 30px;margin-right: 20px;
+    border-radius: 30px;
+    margin-right: 20px;
     flex: 1;
     padding: 10px;
     color: red;
@@ -302,11 +315,16 @@ right: 20px;
 
 .search-section button {
     padding: 10px;
-    font-size: 5vw;    color: red; border-radius: 30px;    font-family: "Jaro", sans-serif !important;
+    font-size: 5vw;
+    color: red;
+    border-radius: 30px;
+    font-family: "Jaro", sans-serif !important;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;border:none;padding:0 30px
+    box-shadow: inset 0 5px 60px red;
+    border: none;
+    padding: 0 30px
 }
 
 .filter-section {
@@ -376,7 +394,7 @@ h2 {
 }
 
 .category-button {
-text-align: left;
+    text-align: left;
     font-size: 8vw;
     line-height: 0.8;
     cursor: pointer;
@@ -550,31 +568,43 @@ a {
 
 
 /* Applying animations to rows */
-.image-grid > div:nth-child(odd) {
+.image-grid>div:nth-child(odd) {
     animation: scrollRowOne 100s linear infinite;
 }
 
-.image-grid > div:nth-child(even) {
+.image-grid>div:nth-child(even) {
     animation: scrollRowTwo 150s linear infinite;
 }
-.image-grid { padding-top: 20px;
+
+.image-grid {
+    padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(2, 1fr);
-        width: 300%;
+    width: 300%;
     height: 100%;
-   z-index: 30;
+    z-index: 30;position: relative
 }
 
 /* Animations */
 @keyframes scrollRowOne {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes scrollRowTwo {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .image-item {
