@@ -489,9 +489,7 @@ a {
 .image-item {
     position: relative;
     margin: 5px;
-    margin: 5px;
-    width: 150px;
-    height: 200px;
+
     perspective: 1000px;
     flex: 0 0 auto;
 }
