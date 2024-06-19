@@ -79,6 +79,8 @@ div.category-section.hidden {
     width: 100%;
     height: 100%;
     cursor: grab;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay {
@@ -536,7 +538,7 @@ a {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
         width: 300%;
     height: 100%;
     animation: scrollLeftRight 150s linear infinite;
