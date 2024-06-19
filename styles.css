@@ -281,7 +281,7 @@ div.button-container {
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;
+    box-shadow: inset 0 5px 60px red;border:none
 }
 
 .filter-section {
@@ -489,7 +489,9 @@ a {
 .image-item {
     position: relative;
     margin: 5px;
-
+    margin: 5px;
+    width: 150px;
+    height: 200px;
     perspective: 1000px;
     flex: 0 0 auto;
 }
