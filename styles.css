@@ -175,12 +175,11 @@ div.button-container {
 
 .image-count {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+ top: 100px;
+right: 20px;
     color: red;
     padding: 10px;
     border-radius: 5px;
-    font-size:2rem;
     z-index: 100;    font-family: "Jaro", sans-serif !important;
 
 }
