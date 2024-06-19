@@ -102,6 +102,19 @@
 
     <div class="image-count"><span id="imageCount">0</span> IMAGES</div>
 
+        <!-- Range Slider -->
+        <div class="range-slider">
+            <input type="range" min="0" max="4" value="0" class="slider" id="yearSlider">
+            <div class="slider-labels">
+                <span>1899</span>
+                <span>1900</span>
+                <span>1901</span>
+                <span>1917</span>
+                <span>1962</span>
+            </div>
+            <div class="selected-year">Selected Year: <span id="selectedYear">1899</span></div>
+        </div>
+
     <script src="script.js"></script>
     <script>
         document.getElementById('bookBtn').addEventListener('click', function () {
@@ -112,6 +125,15 @@
         document.getElementById('closeBtn').addEventListener('click', function () {
             var bookList = document.getElementById('bookList');
             bookList.style.display = 'none';
+        });
+
+        // Range slider functionality
+        const yearSlider = document.getElementById('yearSlider');
+        const selectedYear = document.getElementById('selectedYear');
+        const years = ['1899', '1900', '1901', '1917', '1962'];
+
+        yearSlider.addEventListener('input', function() {
+            selectedYear.textContent = years[yearSlider.value];
         });
     </script>
 </body>
