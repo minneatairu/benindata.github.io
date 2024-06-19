@@ -549,17 +549,33 @@ a {
 }
 
 
+/* Applying animations to rows */
+.image-grid > div:nth-child(odd) {
+    animation: scrollRowOne 100s linear infinite;
+}
+
+.image-grid > div:nth-child(even) {
+    animation: scrollRowTwo 150s linear infinite;
+}
 .image-grid { padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(2, 1fr);
         width: 300%;
     height: 100%;
-    animation: scrollLeftRight 150s linear infinite;
    z-index: 30;
 }
 
+/* Animations */
+@keyframes scrollRowOne {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
 
+@keyframes scrollRowTwo {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
 
 .image-item {
     position: relative;
