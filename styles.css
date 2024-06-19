@@ -300,7 +300,6 @@ div.button-container {
 .category-button {
     margin: 5px 0;
     padding: 10px;
-    font-size: 16px;
 }
 
 p {
@@ -353,7 +352,7 @@ h2 {
 }
 
 .category-button {
-
+text-align: left;
     font-size: 8vw;
     line-height: 0.8;
     cursor: pointer;
