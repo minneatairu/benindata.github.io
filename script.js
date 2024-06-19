@@ -66,15 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // Set the total image count
             imageCount.textContent = data.images.length;
 
-            // Ensure the dragging works on image items as well
-            const imageItems = document.querySelectorAll('.image-item');
-            imageItems.forEach(item => {
-                item.addEventListener('mousedown', handleMouseDown);
-                item.addEventListener('mouseleave', handleMouseLeave);
-                item.addEventListener('mouseup', handleMouseUp);
-                item.addEventListener('mousemove', handleMouseMove);
-            });
-
             // Prevent ghost image while dragging
             const images = document.querySelectorAll('img');
             images.forEach(img => {
