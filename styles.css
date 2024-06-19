@@ -433,17 +433,7 @@ h2 {
     font-family: "Jaro", sans-serif !important;
 }
 
-button.category-button:hover::after {
-    content: ')';
-    transition: content 0.5s ease-in-out;
 
-}
-
-button.category-button:hover::before {
-    content: '(';
-    transition: content 0.5s ease-in-out;
-
-}
 
 .button-container {
     position: absolute;
