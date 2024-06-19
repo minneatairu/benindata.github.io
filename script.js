@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
+    const imageContainer = document.querySelector(".image-container");
     const imageCount = document.getElementById("imageCount");
 
     // Overlay text handling
     const overlay = document.querySelector(".overlay");
     setTimeout(() => {
         overlay.classList.add('hidden');
-    }, 3000);
+    }, 5000);
 
     // Fetch data from data.json and populate the grid
     fetch('data.json')
@@ -179,31 +180,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleMouseDown(e) {
         isDown = true;
-        grid.classList.add('active');
-        startX = e.pageX - grid.offsetLeft;
-        scrollLeft = grid.scrollLeft;
+        imageContainer.classList.add('active');
+        startX = e.pageX - imageContainer.offsetLeft;
+        scrollLeft = imageContainer.scrollLeft;
     }
 
     function handleMouseLeave() {
         isDown = false;
-        grid.classList.remove('active');
+        imageContainer.classList.remove('active');
     }
 
     function handleMouseUp() {
         isDown = false;
-        grid.classList.remove('active');
+        imageContainer.classList.remove('active');
     }
 
     function handleMouseMove(e) {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - grid.offsetLeft;
-        const walk = (x - startX); // Adjust this value to change the drag speed
-        grid.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - imageContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust this value to change the drag speed
+        imageContainer.scrollLeft = scrollLeft - walk;
     }
 
-    grid.addEventListener('mousedown', handleMouseDown);
-    grid.addEventListener('mouseleave', handleMouseLeave);
-    grid.addEventListener('mouseup', handleMouseUp);
-    grid.addEventListener('mousemove', handleMouseMove);
+    imageContainer.addEventListener('mousedown', handleMouseDown);
+    imageContainer.addEventListener('mouseleave', handleMouseLeave);
+    imageContainer.addEventListener('mouseup', handleMouseUp);
+    imageContainer.addEventListener('mousemove', handleMouseMove);
 });
