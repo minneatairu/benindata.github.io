@@ -250,7 +250,7 @@ div.button-container {
 
 .search-section input {
     background: black;
-    border-radius: 30px;
+    border-radius: 30px;margin-right: 20px;
     flex: 1;
     padding: 10px;
     color: red;
