@@ -27,7 +27,7 @@ div.category-section.hidden {
 
 .flip-card {
     height:100%;
-    z-index: 99999;
+    z-index: 99999; padding:0 2rem
 }
 
 .flip-card-inner {
@@ -556,7 +556,7 @@ a {
         width: 300%;
     height: 100%;
     animation: scrollLeftRight 150s linear infinite;
-    gap: 6rem;    z-index: 30;
+   z-index: 30;
 }
 
 
