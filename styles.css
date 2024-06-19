@@ -567,13 +567,14 @@ a {
 }
 
 
-/* Applying animations to rows */
-.image-grid>div:nth-child(odd) {
-    animation: scrollRowOne 50s linear infinite;
+.image-grid > .row-1 {
+    grid-row: 1 / 2;
+    animation: scrollRowOne 60s linear infinite;
 }
 
-.image-grid>div:nth-child(even) {
-    animation: scrollRowTwo 150s linear infinite;
+.image-grid > .row-2 {
+    grid-row: 2 / 3;
+    animation: scrollRowTwo 120s linear infinite;
 }
 
 .image-grid {
