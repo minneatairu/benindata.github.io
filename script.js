@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
+    const imageCount = document.getElementById("imageCount");
 
     // Overlay text handling
     const overlay = document.querySelector(".overlay");
@@ -61,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 grid.appendChild(imageItem);
             });
+
+            // Set the total image count
+            imageCount.textContent = data.images.length;
 
             // Ensure the dragging works on image items as well
             const imageItems = document.querySelectorAll('.image-item');

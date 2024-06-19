@@ -172,6 +172,18 @@ div.button-container {
     animation: fadeIn 2s ease-in-out 4s forwards;
 }
 
+.image-count {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
 
 #dataset {
     font-size: 22vw;
