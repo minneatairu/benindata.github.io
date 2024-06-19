@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
-    const imageContainer = document.querySelector(".image-container");
     const imageCount = document.getElementById("imageCount");
 
     // Overlay text handling
@@ -9,73 +8,85 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.classList.add('hidden');
     }, 5000);
 
+    const yearSlider = document.getElementById('yearSlider');
+    const selectedYear = document.getElementById('selectedYear');
+    const years = ['1899', '1900', '1901', '1917', '1962'];
+    
     // Fetch data from data.json and populate the grid
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            data.images.forEach((item, index) => {
-                const imageItem = document.createElement('div');
-                imageItem.classList.add('image-item');
-                imageItem.setAttribute('data-object-type', item.objectType);
-                imageItem.setAttribute('data-material', item.material);
-
-                const indexNumber = document.createElement('div');
-                indexNumber.classList.add('index-number');
-                indexNumber.textContent = index + 1;
-
-                const flipCard = document.createElement('div');
-                flipCard.classList.add('flip-card');
-
-                const flipCardInner = document.createElement('div');
-                flipCardInner.classList.add('flip-card-inner');
-
-                const flipCardFront = document.createElement('div');
-                flipCardFront.classList.add('flip-card-front');
-
-                const flipCardBack = document.createElement('div');
-                flipCardBack.classList.add('flip-card-back');
-
-                const imgFront = document.createElement('img');
-                imgFront.src = item.frontSrc;
-                imgFront.alt = item.caption;
-                imgFront.draggable = false; // Disable dragging
-
-                const imgBack = document.createElement('img');
-                imgBack.src = item.backSrc;
-                imgBack.alt = item.caption;
-                imgBack.draggable = false; // Disable dragging
-
-                const caption = document.createElement('p');
-                caption.classList.add('caption');
-                caption.textContent = item.caption;
-
-                flipCardFront.appendChild(imgFront);
-                flipCardBack.appendChild(imgBack);
-
-                flipCardInner.appendChild(flipCardFront);
-                flipCardInner.appendChild(flipCardBack);
-
-                flipCard.appendChild(flipCardInner);
-
-                imageItem.appendChild(indexNumber);
-                imageItem.appendChild(flipCard);
-                imageItem.appendChild(caption);
-
-                grid.appendChild(imageItem);
-            });
-
-            // Set the total image count
+            populateGrid(data.images);
             imageCount.textContent = data.images.length;
 
-            // Prevent ghost image while dragging
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('dragstart', (e) => {
-                    e.preventDefault();
-                });
+            // Attach the slider change event
+            yearSlider.addEventListener('input', function() {
+                const year = years[yearSlider.value];
+                selectedYear.textContent = year;
+                filterImagesByYear(data.images, year);
             });
         })
         .catch(error => console.error('Error fetching data:', error));
+
+    function populateGrid(images) {
+        grid.innerHTML = ''; // Clear the grid
+        images.forEach((item, index) => {
+            const imageItem = document.createElement('div');
+            imageItem.classList.add('image-item');
+            imageItem.setAttribute('data-year', item.year);
+            imageItem.setAttribute('data-object-type', item.objectType);
+            imageItem.setAttribute('data-material', item.material);
+
+            const indexNumber = document.createElement('div');
+            indexNumber.classList.add('index-number');
+            indexNumber.textContent = index + 1;
+
+            const flipCard = document.createElement('div');
+            flipCard.classList.add('flip-card');
+
+            const flipCardInner = document.createElement('div');
+            flipCardInner.classList.add('flip-card-inner');
+
+            const flipCardFront = document.createElement('div');
+            flipCardFront.classList.add('flip-card-front');
+
+            const flipCardBack = document.createElement('div');
+            flipCardBack.classList.add('flip-card-back');
+
+            const imgFront = document.createElement('img');
+            imgFront.src = item.frontSrc;
+            imgFront.alt = item.caption;
+            imgFront.draggable = false; // Disable dragging
+
+            const imgBack = document.createElement('img');
+            imgBack.src = item.backSrc;
+            imgBack.alt = item.caption;
+            imgBack.draggable = false; // Disable dragging
+
+            const caption = document.createElement('p');
+            caption.classList.add('caption');
+            caption.textContent = item.caption;
+
+            flipCardFront.appendChild(imgFront);
+            flipCardBack.appendChild(imgBack);
+
+            flipCardInner.appendChild(flipCardFront);
+            flipCardInner.appendChild(flipCardBack);
+
+            flipCard.appendChild(flipCardInner);
+
+            imageItem.appendChild(indexNumber);
+            imageItem.appendChild(flipCard);
+            imageItem.appendChild(caption);
+
+            grid.appendChild(imageItem);
+        });
+    }
+
+    function filterImagesByYear(images, year) {
+        const filteredImages = images.filter(image => image.year === year);
+        populateGrid(filteredImages);
+    }
 
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -127,52 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
         categorySection.classList.toggle('hidden');
     }
 
-    // Category buttons click event
-    const categoryButtons = document.querySelectorAll('.category-button');
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const filterType = this.getAttribute('data-filter-type');
-            const tag = this.getAttribute('data-tag');
-            filterImages(filterType, tag, this.classList.contains('active'));
-        });
-    });
-
-    function filterImages(filterType, tag, isActive) {
-        const images = document.querySelectorAll('.image-item');
-        images.forEach(image => {
-            const objectType = image.getAttribute('data-object-type');
-            const material = image.getAttribute('data-material');
-            if (isActive) {
-                if ((filterType === 'objectType' && objectType === tag) ||
-                    (filterType === 'material' && material === tag)) {
-                    image.style.display = 'block';
-                } else {
-                    image.style.display = 'none';
-                }
-            } else {
-                image.style.display = 'block'; // Reset display when deselected
-            }
-        });
-    }
-
-    // Search functionality
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-
-    searchButton.addEventListener('click', function () {
-        const searchTerm = searchInput.value.toLowerCase();
-        const images = document.querySelectorAll('.image-item');
-        images.forEach(image => {
-            const caption = image.querySelector('.caption').textContent.toLowerCase();
-            if (caption.includes(searchTerm)) {
-                image.style.display = 'block';
-            } else {
-                image.style.display = 'none';
-            }
-        });
-    });
-
     // Drag functionality
     let isDown = false;
     let startX;
@@ -180,31 +145,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleMouseDown(e) {
         isDown = true;
-        imageContainer.classList.add('active');
-        startX = e.pageX - imageContainer.offsetLeft;
-        scrollLeft = imageContainer.scrollLeft;
+        grid.classList.add('active');
+        startX = e.pageX - grid.offsetLeft;
+        scrollLeft = grid.scrollLeft;
     }
 
     function handleMouseLeave() {
         isDown = false;
-        imageContainer.classList.remove('active');
+        grid.classList.remove('active');
     }
 
     function handleMouseUp() {
         isDown = false;
-        imageContainer.classList.remove('active');
+        grid.classList.remove('active');
     }
 
     function handleMouseMove(e) {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - imageContainer.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust this value to change the drag speed
-        imageContainer.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - grid.offsetLeft;
+        const walk = (x - startX); // Adjust this value to change the drag speed
+        grid.scrollLeft = scrollLeft - walk;
     }
 
-    imageContainer.addEventListener('mousedown', handleMouseDown);
-    imageContainer.addEventListener('mouseleave', handleMouseLeave);
-    imageContainer.addEventListener('mouseup', handleMouseUp);
-    imageContainer.addEventListener('mousemove', handleMouseMove);
+    grid.addEventListener('mousedown', handleMouseDown);
+    grid.addEventListener('mouseleave', handleMouseLeave);
+    grid.addEventListener('mouseup', handleMouseUp);
+    grid.addEventListener('mousemove', handleMouseMove);
 });
