@@ -476,8 +476,8 @@ a {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: 1fr;
-    width: 300%;
+    grid-template-rows: repeat(3, 1fr);
+        width: 300%;
     height: 100%;
     animation: scrollLeftRight 150s linear infinite;
     gap: 6rem;
