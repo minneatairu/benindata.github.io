@@ -1,13 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
-    const imageCount = document.getElementById("imageCount");
-
-    // Overlay text handling
-    const overlay = document.querySelector(".overlay");
-    setTimeout(() => {
-        overlay.classList.add('hidden');
-    }, 5000);
-
     const yearSlider = document.getElementById('yearSlider');
     const selectedYear = document.getElementById('selectedYear');
     const years = ['1899', '1900', '1901', '1917', '1962'];
@@ -17,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             populateGrid(data.images);
-            imageCount.textContent = data.images.length;
-
+            
             // Attach the slider change event
             yearSlider.addEventListener('input', function() {
                 const year = years[yearSlider.value];
@@ -86,56 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function filterImagesByYear(images, year) {
         const filteredImages = images.filter(image => image.year === year);
         populateGrid(filteredImages);
-    }
-
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("modalBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // JavaScript for category section toggle
-    const searchBtn = document.getElementById("searchBtn");
-    const categorySection = document.getElementById("categorySection");
-
-    // Function to close the category section
-    function closeCategorySection() {
-        if (!categorySection.classList.contains('hidden')) {
-            categorySection.classList.add('hidden');
-        }
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        if (modal.style.display === "block") {
-            modal.style.display = "none";
-        }
-    }
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        closeCategorySection();
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    searchBtn.onclick = function() {
-        closeModal();
-        categorySection.classList.toggle('hidden');
     }
 
     // Drag functionality
