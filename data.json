@@ -5,21 +5,24 @@
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/06395bc2-b1d4-4590-4c41-b1b6881a1500/public",
             "caption": "Portrait of an Oba",
             "objectType": "Portraits",
-            "material": "Bronze"
+            "material": "Bronze",
+            "year": "1899"
         },
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/bbd01a6e-f458-4d33-fd89-dc976e575a00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/2c91deb2-c5b9-4f28-b5bb-c28152f0dd00/public",
             "caption": "Plaque",
             "objectType": "Figure",
-            "material": "Bronze"
+            "material": "Bronze",
+            "year": "1899"
         },
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/acaf016f-d3c0-4f50-af18-0d3b76d86000/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/748d3849-2068-4da6-1abc-82391a3ba900/public",
             "caption": "Hip Pendant",
             "objectType": "Portraits",
-            "material": "Bronze"
+            "material": "Bronze",
+            "year": "1899"
         },
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/19e3e806-a40c-45f8-2277-712253a2b300/public",
