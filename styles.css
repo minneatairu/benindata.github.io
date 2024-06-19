@@ -551,7 +551,7 @@ a {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: repeat(2, 1fr);
         width: 300%;
     height: 100%;
@@ -563,7 +563,7 @@ a {
 
 .image-item {
     position: relative;
-    margin: 5px;
+
     perspective: 1000px;
 }
 
