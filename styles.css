@@ -486,13 +486,7 @@ a {
     font-size: 4vw;
 }
 
-.image-grid {
-    z-index: 30;
-    flex-wrap: nowrap;
-    cursor: grab;
-    overflow: hidden; /* Prevents scrollbar from showing */
-    user-select: none; /* Prevents text selection while dragging */
-}
+
 
 
 .image-grid {
@@ -502,7 +496,7 @@ a {
         width: 300%;
     height: 100%;
     animation: scrollLeftRight 150s linear infinite;
-    gap: 6rem;
+    gap: 6rem;    z-index: 30;
 }
 
 
