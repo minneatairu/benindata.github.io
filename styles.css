@@ -569,7 +569,7 @@ a {
 
 /* Applying animations to rows */
 .image-grid>div:nth-child(odd) {
-    animation: scrollRowOne 100s linear infinite;
+    animation: scrollRowOne 50s linear infinite;
 }
 
 .image-grid>div:nth-child(even) {
