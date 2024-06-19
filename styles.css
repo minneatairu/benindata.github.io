@@ -91,13 +91,22 @@ div.category-section.hidden {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 30;
-    font-family: "Jaro", sans-serif !important;
+    z-index: 1000;
+    font-family: "Jaro", sans-serif !important;    transition: opacity 1s ease-out;    height: 100%;
+
 }
 
 div.overlay-text {
     z-index: 500;
 }
+
+
+
+.overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 #benin .year {
     font-size: 10vw;
@@ -166,22 +175,6 @@ div.button-container {
 }
 
 
-#dataset {
-    font-size: 22vw;
-    /* Full-screen width font size for Dataset */
-    color: red;
-    text-align: center;
-    line-height: 0.8;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    animation: fadeInOut 5s ease-in-out forwards;
-    font-family: "Jaro", sans-serif !important;
-    position: absolute;
-    top: 0;
-    font-weight: 800;
-    text-transform: uppercase;
-}
 
 
 
