@@ -80,7 +80,7 @@ div.category-section.hidden {
     height: 100%;
     cursor: grab;
     justify-content: center;
-    align-items: center;    padding-top: 20px;
+    align-items: center;   
 }
 
 .image-item::before {
@@ -549,7 +549,7 @@ a {
 }
 
 
-.image-grid {
+.image-grid { padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(2, 1fr);
