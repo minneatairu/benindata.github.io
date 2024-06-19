@@ -169,21 +169,15 @@ div.overlay-text {
 
 div.button-container {
     opacity: 0;
-    /* Start invisible */
     animation: fadeIn 2s ease-in-out 4s forwards;
-    /* Fade in over 2 seconds after a 5-second delay */
 }
 
 
 #dataset {
     font-size: 22vw;
-    /* Full-screen width font size for Dataset */
     color: red;
     text-align: center;
     line-height: 0.8;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
     font-family: "Jaro", sans-serif !important;
     font-weight: 800;
     text-transform: uppercase;
