@@ -29,14 +29,16 @@
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/6a5dd3fd-6501-496f-82a1-cb84808f9400/public",
             "caption": "Caption for image 1",
             "objectType": "Figures",
-            "material": "Bronze"
+            "material": "Bronze",
+            "year": "1900"
         },
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/4dc924f6-1cc0-484b-11ff-53a560e9ae00/public",
             "backSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/cdf836c4-1dda-4658-b380-0d92dd393000/public",
             "caption": "Caption for image 1",
             "objectType": "portrait",
-            "material": "Bronze"
+            "material": "Bronze",
+            "year": "1900"
         },
         {
             "frontSrc": "https://imagedelivery.net/73rDPZmGMONoXal8vyPUQw/a0aad4e5-0063-4687-0049-216f26234900/public",

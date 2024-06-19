@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
     const yearSlider = document.getElementById('yearSlider');
     const selectedYear = document.getElementById('selectedYear');
-    const years = ['1899', '1900', '1901', '1917', '1962'];
-    
+    const yearLabels = document.querySelectorAll('.slider-labels span');
+    const years = Array.from(yearLabels).map(label => label.getAttribute('data-year'));
+
     // Fetch data from data.json and populate the grid
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             populateGrid(data.images);
-            
+
             // Attach the slider change event
             yearSlider.addEventListener('input', function() {
                 const year = years[yearSlider.value];
