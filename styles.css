@@ -28,7 +28,7 @@ div.category-section.hidden {
 .flip-card {
     height: 100%;
     z-index: 99999;
-    padding: 0 2rem
+    padding: 0 2rem;     border-top: 1px solid red;
 }
 
 .flip-card-inner {
@@ -555,7 +555,6 @@ a {
     position: relative;
     gap: 1rem;
 }
-#gridOne, #gridTwo {padding-top: 5rem;border-top: 1px solid red;}
 /* Animations */
 @keyframes scrollRowOne {
     0% {
