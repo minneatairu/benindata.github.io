@@ -555,7 +555,7 @@ a {
     position: relative;
     gap: 1rem;
 }
-#gridOne, #gridTwo {padding-top: 5rem;}
+#gridOne, #gridTwo {padding-top: 5rem;border-top: 1px solid red;}
 /* Animations */
 @keyframes scrollRowOne {
     0% {
