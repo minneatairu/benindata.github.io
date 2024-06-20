@@ -556,7 +556,6 @@ a {
     grid-template-rows: repeat(2, 1fr);
         width: 300%;
     height: 100%;
-    animation: scrollLeftRight 150s linear infinite;
    z-index: 30;
 }
 
