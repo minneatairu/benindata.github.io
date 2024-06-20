@@ -571,6 +571,15 @@ a {
     100% { transform: translateX(-100%); }
 }
 
+#gridOne {
+    animation: scrollRowOne 100s linear infinite;
+}
+
+#gridTwo {
+    animation: scrollRowTwo 150s linear infinite;
+}
+
+
 .image-item {
     position: relative;
 
