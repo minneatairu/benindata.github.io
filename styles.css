@@ -549,14 +549,13 @@ a {
 }
 
 
-.image-grid { 
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-        width: 300%;
-    height: 100%;
-   z-index: 30;
+.image-grid {
+    display: flex;
+    width: 300%;
+    height: 50%;
+    z-index: 30;
+    position: relative;
+    gap: 1rem;
 }
 
 /* Animations */
