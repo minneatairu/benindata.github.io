@@ -80,7 +80,7 @@ div.category-section.hidden {
     height: 100%;
     cursor: grab;
     justify-content: center;
-    align-items: center;   padding-top: 20px;
+    align-items: center;  
 }
 
 .image-item::before {
