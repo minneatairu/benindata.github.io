@@ -553,7 +553,7 @@ a {
     height: 50%;
     z-index: 30;
     position: relative;
-    gap: 1rem;
+
 }
 /* Animations */
 @keyframes scrollRowOne {
