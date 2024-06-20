@@ -1,40 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gridOne = document.getElementById('gridOne');
     const gridTwo = document.getElementById('gridTwo');
-    const yearSlider = document.getElementById('yearSlider');
-    const selectedYear = document.getElementById('selectedYear');
-    const yearLabels = document.querySelectorAll('.slider-labels span');
-    const years = Array.from(yearLabels).map(label => label.getAttribute('data-year'));
+    const imageContainer = document.querySelector(".image-container");
+    const imageCount = document.getElementById("imageCount");
 
-    // Fetch data from both JSON files and populate the grids
+    // Overlay text handling
+    const overlay = document.querySelector(".overlay");
+    setTimeout(() => {
+        overlay.classList.add('hidden');
+    }, 5000);
+
+    // Fetch data from data.json and populate the first grid
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             populateGrid(data.images, gridOne);
-        })
-        .catch(error => console.error('Error fetching data from data.json:', error));
 
+            // Set the total image count
+            imageCount.textContent = data.images.length;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+    // Fetch data from datatwo.json and populate the second grid
     fetch('datatwo.json')
         .then(response => response.json())
         .then(data => {
             populateGrid(data.images, gridTwo);
         })
-        .catch(error => console.error('Error fetching data from datatwo.json:', error));
-
-    yearSlider.addEventListener('input', function() {
-        const year = years[yearSlider.value];
-        selectedYear.textContent = year;
-        filterImagesByYear(year);
-    });
+        .catch(error => console.error('Error fetching data:', error));
 
     function populateGrid(images, grid) {
-        grid.innerHTML = ''; // Clear the grid
         images.forEach((item, index) => {
             const imageItem = document.createElement('div');
             imageItem.classList.add('image-item');
-            imageItem.setAttribute('data-year', item.year);
             imageItem.setAttribute('data-object-type', item.objectType);
             imageItem.setAttribute('data-material', item.material);
+            imageItem.setAttribute('data-year', item.year);
 
             const indexNumber = document.createElement('div');
             indexNumber.classList.add('index-number');
@@ -82,16 +83,101 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function filterImagesByYear(year) {
-        const allImages = document.querySelectorAll('.image-item');
-        allImages.forEach(image => {
-            if (image.getAttribute('data-year') === year) {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("modalBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // JavaScript for category section toggle
+    const searchBtn = document.getElementById("searchBtn");
+    const categorySection = document.getElementById("categorySection");
+
+    // Function to close the category section
+    function closeCategorySection() {
+        if (!categorySection.classList.contains('hidden')) {
+            categorySection.classList.add('hidden');
+        }
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        if (modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        closeCategorySection();
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    searchBtn.onclick = function() {
+        closeModal();
+        categorySection.classList.toggle('hidden');
+    }
+
+    // Category buttons click event
+    const categoryButtons = document.querySelectorAll('.category-button');
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const filterType = this.getAttribute('data-filter-type');
+            const tag = this.getAttribute('data-tag');
+            filterImages(filterType, tag, this.classList.contains('active'));
+        });
+    });
+
+    function filterImages(filterType, tag, isActive) {
+        const images = document.querySelectorAll('.image-item');
+        images.forEach(image => {
+            const objectType = image.getAttribute('data-object-type');
+            const material = image.getAttribute('data-material');
+            if (isActive) {
+                if ((filterType === 'objectType' && objectType === tag) ||
+                    (filterType === 'material' && material === tag)) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            } else {
+                image.style.display = 'block'; // Reset display when deselected
+            }
+        });
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchButton.addEventListener('click', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        const images = document.querySelectorAll('.image-item');
+        images.forEach(image => {
+            const caption = image.querySelector('.caption').textContent.toLowerCase();
+            if (caption.includes(searchTerm)) {
                 image.style.display = 'block';
             } else {
                 image.style.display = 'none';
             }
         });
-    }
+    });
 
     // Drag functionality
     let isDown = false;
@@ -100,40 +186,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleMouseDown(e) {
         isDown = true;
-        gridOne.classList.add('active');
-        gridTwo.classList.add('active');
-        startX = e.pageX - gridOne.offsetLeft;
-        scrollLeft = gridOne.scrollLeft;
+        imageContainer.classList.add('active');
+        startX = e.pageX - imageContainer.offsetLeft;
+        scrollLeft = imageContainer.scrollLeft;
     }
 
     function handleMouseLeave() {
         isDown = false;
-        gridOne.classList.remove('active');
-        gridTwo.classList.remove('active');
+        imageContainer.classList.remove('active');
     }
 
     function handleMouseUp() {
         isDown = false;
-        gridOne.classList.remove('active');
-        gridTwo.classList.remove('active');
+        imageContainer.classList.remove('active');
     }
 
     function handleMouseMove(e) {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - gridOne.offsetLeft;
-        const walk = (x - startX); // Adjust this value to change the drag speed
-        gridOne.scrollLeft = scrollLeft - walk;
-        gridTwo.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - imageContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust this value to change the drag speed
+        imageContainer.scrollLeft = scrollLeft - walk;
     }
 
-    gridOne.addEventListener('mousedown', handleMouseDown);
-    gridOne.addEventListener('mouseleave', handleMouseLeave);
-    gridOne.addEventListener('mouseup', handleMouseUp);
-    gridOne.addEventListener('mousemove', handleMouseMove);
-
-    gridTwo.addEventListener('mousedown', handleMouseDown);
-    gridTwo.addEventListener('mouseleave', handleMouseLeave);
-    gridTwo.addEventListener('mouseup', handleMouseUp);
-    gridTwo.addEventListener('mousemove', handleMouseMove);
+    imageContainer.addEventListener('mousedown', handleMouseDown);
+    imageContainer.addEventListener('mouseleave', handleMouseLeave);
+    imageContainer.addEventListener('mouseup', handleMouseUp);
+    imageContainer.addEventListener('mousemove', handleMouseMove);
 });
