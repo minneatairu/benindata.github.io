@@ -549,7 +549,7 @@ a {
 
 .image-grid {
     display: flex;
-    width: 300%;
+    width: 200%;
     height: 50%;
     z-index: 30;
     position: relative;
