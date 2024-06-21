@@ -69,11 +69,14 @@ div.category-section.hidden {
 }
 
 .caption {
-    color: red;
+    color: red;    display: none; /* Initially hide the caption */
+
     text-align: center;
 
 }
-
+.image-item:hover .caption {
+    display: block; /* Show the caption on hover */
+}
 .image-container {
     display: flex;
     flex-direction: column; /* Ensure the rows are stacked vertically */
