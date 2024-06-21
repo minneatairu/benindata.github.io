@@ -595,7 +595,6 @@ a {
     animation: scrollRowTwo 150s linear infinite;
 }
 
-#gridOne:hover{background-color: red;}
 .image-item {
     position: relative;
 
