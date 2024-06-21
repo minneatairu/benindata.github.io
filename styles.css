@@ -67,12 +67,19 @@ div.category-section.hidden {
 .flip-card-back {
     transform: rotateY(180deg);
 }
-
+img {border: 1px solid red ;}
 .caption {
+
+    color: red;
+    text-align: center;opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
     color: red;    display: none; /* Initially hide the caption */
 
     text-align: center;
 
+}
+.image-item:hover .caption {
+    opacity: 1; /* Show caption on hover */
 }
 .image-item:hover .caption {
     display: block; /* Show the caption on hover */
