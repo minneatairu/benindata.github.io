@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gridOne = document.getElementById('gridOne');
     const gridTwo = document.getElementById('gridTwo');
+    const imageContainer = document.querySelector(".image-container");
     const imageCount = document.getElementById("imageCount");
 
     // Overlay text handling
@@ -178,73 +179,62 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Drag functionality for gridOne
-    let isDownOne = false;
-    let startXOne;
-    let scrollLeftOne;
+    // Range slider functionality
+    const yearSlider = document.getElementById('yearSlider');
+    const selectedYear = document.getElementById('selectedYear');
+    const yearLabels = document.querySelectorAll('.slider-labels span');
+    const years = Array.from(yearLabels).map(label => label.getAttribute('data-year'));
 
-    function handleMouseDownOne(e) {
-        isDownOne = true;
-        gridOne.classList.add('active');
-        startXOne = e.pageX - gridOne.offsetLeft;
-        scrollLeftOne = gridOne.scrollLeft;
+    yearSlider.addEventListener('input', function() {
+        const year = years[yearSlider.value];
+        selectedYear.textContent = year;
+        filterImagesByYear(year);
+    });
+
+    function filterImagesByYear(year) {
+        const images = document.querySelectorAll('.image-item');
+        images.forEach(image => {
+            const imageYear = image.getAttribute('data-year');
+            if (imageYear === year) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
     }
 
-    function handleMouseLeaveOne() {
-        isDownOne = false;
-        gridOne.classList.remove('active');
+    // Drag functionality
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    function handleMouseDown(e) {
+        isDown = true;
+        imageContainer.classList.add('active');
+        startX = e.pageX - imageContainer.offsetLeft;
+        scrollLeft = imageContainer.scrollLeft;
     }
 
-    function handleMouseUpOne() {
-        isDownOne = false;
-        gridOne.classList.remove('active');
+    function handleMouseLeave() {
+        isDown = false;
+        imageContainer.classList.remove('active');
     }
 
-    function handleMouseMoveOne(e) {
-        if (!isDownOne) return;
+    function handleMouseUp() {
+        isDown = false;
+        imageContainer.classList.remove('active');
+    }
+
+    function handleMouseMove(e) {
+        if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - gridOne.offsetLeft;
-        const walk = (x - startXOne) * 2; // Adjust this value to change the drag speed
-        gridOne.scrollLeft = scrollLeftOne - walk;
+        const x = e.pageX - imageContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust this value to change the drag speed
+        imageContainer.scrollLeft = scrollLeft - walk;
     }
 
-    gridOne.addEventListener('mousedown', handleMouseDownOne);
-    gridOne.addEventListener('mouseleave', handleMouseLeaveOne);
-    gridOne.addEventListener('mouseup', handleMouseUpOne);
-    gridOne.addEventListener('mousemove', handleMouseMoveOne);
-
-    // Drag functionality for gridTwo
-    let isDownTwo = false;
-    let startXTwo;
-    let scrollLeftTwo;
-
-    function handleMouseDownTwo(e) {
-        isDownTwo = true;
-        gridTwo.classList.add('active');
-        startXTwo = e.pageX - gridTwo.offsetLeft;
-        scrollLeftTwo = gridTwo.scrollLeft;
-    }
-
-    function handleMouseLeaveTwo() {
-        isDownTwo = false;
-        gridTwo.classList.remove('active');
-    }
-
-    function handleMouseUpTwo() {
-        isDownTwo = false;
-        gridTwo.classList.remove('active');
-    }
-
-    function handleMouseMoveTwo(e) {
-        if (!isDownTwo) return;
-        e.preventDefault();
-        const x = e.pageX - gridTwo.offsetLeft;
-        const walk = (x - startXTwo) * 2; // Adjust this value to change the drag speed
-        gridTwo.scrollLeft = scrollLeftTwo - walk;
-    }
-
-    gridTwo.addEventListener('mousedown', handleMouseDownTwo);
-    gridTwo.addEventListener('mouseleave', handleMouseLeaveTwo);
-    gridTwo.addEventListener('mouseup', handleMouseUpTwo);
-    gridTwo.addEventListener('mousemove', handleMouseMoveTwo);
+    imageContainer.addEventListener('mousedown', handleMouseDown);
+    imageContainer.addEventListener('mouseleave', handleMouseLeave);
+    imageContainer.addEventListener('mouseup', handleMouseUp);
+    imageContainer.addEventListener('mousemove', handleMouseMove);
 });
