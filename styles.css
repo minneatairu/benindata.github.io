@@ -40,7 +40,7 @@ div.category-section.hidden {
     transform-style: preserve-3d;
 }
 
-.image-item.scale-up {
+.flip-card.scale-up {
     transform: scale(1.2); /* Scale up the image */
 }
 
