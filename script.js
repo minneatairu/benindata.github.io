@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gridTwo = document.getElementById('gridTwo');
     const imageContainer = document.querySelector(".image-container");
     const imageCount = document.getElementById("imageCount");
+    const gongSound = document.getElementById("gongSound");
 
     // Overlay text handling
     const overlay = document.querySelector(".overlay");
@@ -82,6 +83,42 @@ document.addEventListener("DOMContentLoaded", function () {
             grid.appendChild(imageItem);
         });
     }
+
+    // Web Audio API for audio reactivity
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioContext.createMediaElementSource(gongSound);
+    const analyser = audioContext.createAnalyser();
+
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+    analyser.fftSize = 256;
+
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function animateImages() {
+        analyser.getByteFrequencyData(dataArray);
+
+        const averageFrequency = dataArray.reduce((a, b) => a + b, 0) / bufferLength;
+
+        const scaleFactor = averageFrequency / 256; // Normalize the frequency value
+
+        document.querySelectorAll('.image-item').forEach(item => {
+            if (scaleFactor > 0.5) { // Adjust this threshold as needed
+                item.classList.add('scale-up');
+            } else {
+                item.classList.remove('scale-up');
+            }
+        });
+
+        requestAnimationFrame(animateImages);
+    }
+
+    gongSound.addEventListener('play', () => {
+        audioContext.resume().then(() => {
+            animateImages();
+        });
+    });
 
     // Get the modal
     var modal = document.getElementById("myModal");
