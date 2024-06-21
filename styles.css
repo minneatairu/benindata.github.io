@@ -67,6 +67,7 @@ div.category-section.hidden {
 .flip-card-back {
     transform: rotateY(180deg);
 }
+
 img {border: 1px solid red ;}
 .caption {
 
@@ -594,7 +595,7 @@ a {
     animation: scrollRowTwo 150s linear infinite;
 }
 
-
+#gridOne:hover{background-color: red;}
 .image-item {
     position: relative;
 
