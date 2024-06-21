@@ -609,7 +609,8 @@ a {
     flex: 0 0 auto; /* Ensure the items don't shrink */
     width: 200px; /* Adjust as needed */
     height: auto;
-    perspective: 1000px;
+    perspective: 1000px;    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+
 }
 
 .image-item img {
