@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gridOne = document.getElementById('gridOne');
     const gridTwo = document.getElementById('gridTwo');
-    const imageContainer = document.querySelector(".image-container");
     const imageCount = document.getElementById("imageCount");
     const gongSound = document.getElementById("gongSound");
 
@@ -11,14 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.classList.add('hidden');
     }, 2000);
 
-    let allImages = [];
-
     // Fetch data from data.json and populate the first grid
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            allImages = data.images;
             populateGrid(data.images, gridOne);
+
+            // Set the total image count
             imageCount.textContent = data.images.length;
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('datatwo.json')
         .then(response => response.json())
         .then(data => {
-            allImages = allImages.concat(data.images);
             populateGrid(data.images, gridTwo);
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -105,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const scaleFactor = averageFrequency / 256; // Normalize the frequency value
 
-        document.querySelectorAll('.image-item').forEach(item => {
+        document.querySelectorAll('.flip-card').forEach(item => {
             if (scaleFactor > 0.5) { // Adjust this threshold as needed
                 item.classList.add('scale-up');
             } else {
@@ -242,38 +239,73 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Drag functionality
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    // Drag functionality for gridOne
+    let isDownOne = false;
+    let startXOne;
+    let scrollLeftOne;
 
-    function handleMouseDown(e) {
-        isDown = true;
-        imageContainer.classList.add('active');
-        startX = e.pageX - imageContainer.offsetLeft;
-        scrollLeft = imageContainer.scrollLeft;
+    function handleMouseDownOne(e) {
+        isDownOne = true;
+        gridOne.classList.add('active');
+        startXOne = e.pageX - gridOne.offsetLeft;
+        scrollLeftOne = gridOne.scrollLeft;
     }
 
-    function handleMouseLeave() {
-        isDown = false;
-        imageContainer.classList.remove('active');
+    function handleMouseLeaveOne() {
+        isDownOne = false;
+        gridOne.classList.remove('active');
     }
 
-    function handleMouseUp() {
-        isDown = false;
-        imageContainer.classList.remove('active');
+    function handleMouseUpOne() {
+        isDownOne = false;
+        gridOne.classList.remove('active');
     }
 
-    function handleMouseMove(e) {
-        if (!isDown) return;
+    function handleMouseMoveOne(e) {
+        if (!isDownOne) return;
         e.preventDefault();
-        const x = e.pageX - imageContainer.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust this value to change the drag speed
-        imageContainer.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - gridOne.offsetLeft;
+        const walk = (x - startXOne) * 2; // Adjust this value to change the drag speed
+        gridOne.scrollLeft = scrollLeftOne - walk;
     }
 
-    imageContainer.addEventListener('mousedown', handleMouseDown);
-    imageContainer.addEventListener('mouseleave', handleMouseLeave);
-    imageContainer.addEventListener('mouseup', handleMouseUp);
-    imageContainer.addEventListener('mousemove', handleMouseMove);
+    gridOne.addEventListener('mousedown', handleMouseDownOne);
+    gridOne.addEventListener('mouseleave', handleMouseLeaveOne);
+    gridOne.addEventListener('mouseup', handleMouseUpOne);
+    gridOne.addEventListener('mousemove', handleMouseMoveOne);
+
+    // Drag functionality for gridTwo
+    let isDownTwo = false;
+    let startXTwo;
+    let scrollLeftTwo;
+
+    function handleMouseDownTwo(e) {
+        isDownTwo = true;
+        gridTwo.classList.add('active');
+        startXTwo = e.pageX - gridTwo.offsetLeft;
+        scrollLeftTwo = gridTwo.scrollLeft;
+    }
+
+    function handleMouseLeaveTwo() {
+        isDownTwo = false;
+        gridTwo.classList.remove('active');
+    }
+
+    function handleMouseUpTwo() {
+        isDownTwo = false;
+        gridTwo.classList.remove('active');
+    }
+
+    function handleMouseMoveTwo(e) {
+        if (!isDownTwo) return;
+        e.preventDefault();
+        const x = e.pageX - gridTwo.offsetLeft;
+        const walk = (x - startXTwo) * 2; // Adjust this value to change the drag speed
+        gridTwo.scrollLeft = scrollLeftTwo - walk;
+    }
+
+    gridTwo.addEventListener('mousedown', handleMouseDownTwo);
+    gridTwo.addEventListener('mouseleave', handleMouseLeaveTwo);
+    gridTwo.addEventListener('mouseup', handleMouseUpTwo);
+    gridTwo.addEventListener('mousemove', handleMouseMoveTwo);
 });
