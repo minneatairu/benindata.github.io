@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const scaleFactor = averageFrequency / 256; // Normalize the frequency value
 
-        document.querySelectorAll('.flip-card').forEach(item => {
+        document.querySelectorAll('.image-item[data-object-type="Portraits"] .flip-card').forEach(item => {
             if (scaleFactor > 0.5) { // Adjust this threshold as needed
                 item.classList.add('scale-up');
             } else {
