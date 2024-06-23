@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll('.image-item');
         images.forEach(image => {
             const imageYear = image.getAttribute('data-year');
-            if (imageYear === year) {
+            if (parseInt(imageYear) === parseInt(year)) {
                 image.style.display = 'block';
             } else {
                 image.style.display = 'none';
