@@ -12,6 +12,10 @@ body {
 
 
 
+.scale-up {
+    transform: scale(1.5); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
 
 
 div.category-section.hidden {
