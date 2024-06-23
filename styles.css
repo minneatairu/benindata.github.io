@@ -98,7 +98,6 @@ img {border: 1px solid red ;}
     flex-direction: column; /* Ensure the rows are stacked vertically */
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     width: 100%;
     height: 100%;
     cursor: grab;
@@ -204,7 +203,7 @@ div.button-container {
 display:flex;  
     color: red;
     padding: 10px;
-
+font-size: 4vw;
     font-family: "Jaro", sans-serif !important;
 
 }
