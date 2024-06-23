@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AR Bead Shirt with Commemorative Head</title>
+    <title>AR Beaded Shirt with Three.js</title>
     <style>
         body { margin: 0; overflow: hidden; }
         canvas { display: block; }
@@ -57,30 +57,34 @@
             patternUrl: 'https://raw.githack.com/AR-js-org/AR.js/master/data/data/patt.hiro'
         });
 
-        // Load a bead model (for demonstration, use a small sphere)
+        // Create beads to form the shirt
         const beadGeometry = new THREE.SphereGeometry(0.05, 16, 16);
-        const beadMaterial = new THREE.MeshBasicMaterial({ color: 0xff6347 });
-        const numBeads = 200;
-        const instancedMesh = new THREE.InstancedMesh(beadGeometry, beadMaterial, numBeads);
+        const beadMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        const numBeadsX = 10;
+        const numBeadsY = 15;
+        const beadSpacing = 0.12;
 
-        // Position beads to form a shirt
+        const instancedMesh = new THREE.InstancedMesh(beadGeometry, beadMaterial, numBeadsX * numBeadsY);
         const dummy = new THREE.Object3D();
-        for (let i = 0; i < numBeads; i++) {
-            const x = (Math.random() - 0.5) * 2; // Adjust for shirt shape
-            const y = (Math.random() - 0.5) * 3; // Adjust for shirt shape
-            const z = 0;
-            dummy.position.set(x, y, z);
-            dummy.updateMatrix();
-            instancedMesh.setMatrixAt(i, dummy.matrix);
+
+        for (let i = 0; i < numBeadsX; i++) {
+            for (let j = 0; j < numBeadsY; j++) {
+                const id = i * numBeadsY + j;
+                dummy.position.set(i * beadSpacing - (numBeadsX * beadSpacing) / 2, j * beadSpacing - (numBeadsY * beadSpacing) / 2, 0);
+                dummy.updateMatrix();
+                instancedMesh.setMatrixAt(id, dummy.matrix);
+            }
         }
+
         markerRoot.add(instancedMesh);
 
-        // Load a head model (for simplicity, using a box as a placeholder)
-        const headGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-        const headMaterial = new THREE.MeshBasicMaterial({ color: 0x87ceeb });
-        const headMesh = new THREE.Mesh(headGeometry, headMaterial);
-        headMesh.position.set(0, 1.5, 0); // Position above the shirt
-        markerRoot.add(headMesh);
+        // Load and insert the commemorative head model
+        const loader = new THREE.GLTFLoader();
+        loader.load('path/to/your/head_model.glb', (gltf) => {
+            const headModel = gltf.scene;
+            headModel.position.set(0, 0, 0.5); // Adjust position as needed
+            markerRoot.add(headModel);
+        });
 
         // Render loop
         function render() {
@@ -95,5 +99,6 @@
 
         render();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
 </body>
 </html>
