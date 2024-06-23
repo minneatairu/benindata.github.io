@@ -103,7 +103,7 @@ img {border: 1px solid red ;}
     height: 100%;
     cursor: grab;
 }
-
+#gridOne {  cursor: grab;}
 
 .overlay {
     position: absolute;
