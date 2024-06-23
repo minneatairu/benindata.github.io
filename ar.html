@@ -1,1 +1,99 @@
-<audio id="gongSound" src="gong.mp3" controls></audio>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR Bead Shirt with Commemorative Head</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script>
+</head>
+<body>
+    <script>
+        // Initialize the scene
+        const scene = new THREE.Scene();
+        const camera = new THREE.Camera();
+        scene.add(camera);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Initialize AR.js
+        const arToolkitSource = new THREEx.ArToolkitSource({ sourceType: 'webcam' });
+
+        arToolkitSource.init(() => {
+            setTimeout(() => {
+                onResize();
+            }, 2000);
+        });
+
+        window.addEventListener('resize', onResize);
+
+        function onResize() {
+            arToolkitSource.onResize();
+            arToolkitSource.copySizeTo(renderer.domElement);
+            if (arToolkitContext.arController !== null) {
+                arToolkitSource.copySizeTo(arToolkitContext.arController.canvas);
+            }
+        }
+
+        const arToolkitContext = new THREEx.ArToolkitContext({
+            cameraParametersUrl: 'https://raw.githack.com/AR-js-org/AR.js/master/data/data/camera_para.dat',
+            detectionMode: 'mono'
+        });
+
+        arToolkitContext.init(() => {
+            camera.projectionMatrix.copy(arToolkitContext.getProjectionMatrix());
+        });
+
+        // Create a marker
+        const markerRoot = new THREE.Group();
+        scene.add(markerRoot);
+
+        const markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
+            type: 'pattern',
+            patternUrl: 'https://raw.githack.com/AR-js-org/AR.js/master/data/data/patt.hiro'
+        });
+
+        // Load a bead model (for demonstration, use a small sphere)
+        const beadGeometry = new THREE.SphereGeometry(0.05, 16, 16);
+        const beadMaterial = new THREE.MeshBasicMaterial({ color: 0xff6347 });
+        const numBeads = 200;
+        const instancedMesh = new THREE.InstancedMesh(beadGeometry, beadMaterial, numBeads);
+
+        // Position beads to form a shirt
+        const dummy = new THREE.Object3D();
+        for (let i = 0; i < numBeads; i++) {
+            const x = (Math.random() - 0.5) * 2; // Adjust for shirt shape
+            const y = (Math.random() - 0.5) * 3; // Adjust for shirt shape
+            const z = 0;
+            dummy.position.set(x, y, z);
+            dummy.updateMatrix();
+            instancedMesh.setMatrixAt(i, dummy.matrix);
+        }
+        markerRoot.add(instancedMesh);
+
+        // Load a head model (for simplicity, using a box as a placeholder)
+        const headGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+        const headMaterial = new THREE.MeshBasicMaterial({ color: 0x87ceeb });
+        const headMesh = new THREE.Mesh(headGeometry, headMaterial);
+        headMesh.position.set(0, 1.5, 0); // Position above the shirt
+        markerRoot.add(headMesh);
+
+        // Render loop
+        function render() {
+            requestAnimationFrame(render);
+
+            if (arToolkitSource.ready) {
+                arToolkitContext.update(arToolkitSource.domElement);
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        render();
+    </script>
+</body>
+</html>
