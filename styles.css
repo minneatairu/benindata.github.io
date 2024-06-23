@@ -568,7 +568,9 @@ a {
     width: 100%;
     height: 50%;
     z-index: 30;
-    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    cursor: grab;
 
 }
 /* Animations */
