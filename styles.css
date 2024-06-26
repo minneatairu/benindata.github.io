@@ -8,6 +8,7 @@ body {
     align-items: center;
     background-color: #000;
 }
+
 @font-face {
     font-family: 'dotted';
     src: url('dot.ttf') format('woff2');
@@ -18,8 +19,10 @@ body {
 
 
 .scale-up {
-    transform: scale(1.5); /* Adjust the scale factor as needed */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform: scale(1.5);
+    /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
 }
 
 
@@ -37,7 +40,9 @@ div.category-section.hidden {
 .flip-card {
     height: 70%;
     z-index: 99999;
-    padding: 0 2rem;     border-top: 2px dotted #ffffff;padding-top: 3rem;
+    padding: 0 2rem;
+    border-top: 2px dotted #ffffff;
+    padding-top: 3rem;
 }
 
 .flip-card-inner {
@@ -50,7 +55,8 @@ div.category-section.hidden {
 }
 
 .flip-card.scale-up {
-    transform: scale(1.2); /* Scale up the image */
+    transform: scale(1.2);
+    /* Scale up the image */
 }
 
 .flip-card:hover .flip-card-inner {
@@ -65,9 +71,11 @@ div.category-section.hidden {
     backface-visibility: hidden;
 }
 
-.index-number {line-height: 1;
+.index-number {
+    line-height: 1;
     position: absolute;
-    top: 5px;font-size: 1rem;
+    top: 5px;
+    font-size: 1rem;
     left: 5px;
     color: #ffffff;
     font-family: "dotted", sans-serif !important;
@@ -76,38 +84,59 @@ div.category-section.hidden {
 .flip-card-front {
     z-index: 99999;
 }
-p{text-align: justify;}
+
+p {
+    text-align: justify;
+}
+
 .flip-card-back {
     transform: rotateY(180deg);
 }
 
-img {border: 2px dotted #ffffff ;}
+img {
+    border: 2px dotted #ffffff;
+}
+
 .caption {
-font-size: 1rem;
+    font-size: 1rem;
     color: #ffffff;
-    text-align: center;opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition */
-    color: #ffffff;    display: none; /* Initially hide the caption */
+    text-align: center;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition */
+    color: #ffffff;
+    display: none;
+    /* Initially hide the caption */
 
     text-align: center;
 
 }
+
 .image-item:hover .caption {
-    opacity: 1; /* Show caption on hover */
+    opacity: 1;
+    /* Show caption on hover */
 }
+
 .image-item:hover .caption {
-    display: block; /* Show the caption on hover */
+    display: block;
+    /* Show the caption on hover */
 }
+
 .image-container {
     display: flex;
-    flex-direction: column; /* Ensure the rows are stacked vertically */
+    flex-direction: column;
+    /* Ensure the rows are stacked vertically */
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     cursor: grab;
 }
-#gridOne {  cursor: grab;}
+
+#gridOne {
+    cursor: grab;
+}
 
 .overlay {
     position: absolute;
@@ -201,10 +230,10 @@ div.overlay-text {
 
 
 .image-count {
-display:flex;  
+    display: flex;
     color: #ffffff;
     padding: 10px;
-font-size: 1rem;
+    font-size: 1rem;
     font-family: "dotted", sans-serif !important;
 
 }
@@ -236,7 +265,7 @@ font-size: 1rem;
     font-size: 1rem;
     position: absolute;
     left: 20px;
-   TOP:20PX
+    TOP: 20PX
 }
 
 .category-section {
@@ -291,7 +320,7 @@ font-size: 1rem;
     flex: 1;
     padding: 30px;
     color: #ffffff;
-    font-size:1rem;
+    font-size: 1rem;
     border: none;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
@@ -332,7 +361,11 @@ font-size: 1rem;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
-#imageCount {padding-right: 10px;}
+
+#imageCount {
+    padding-right: 10px;
+}
+
 .category-section h2 {
     margin: 0;
 }
@@ -346,9 +379,14 @@ p {
 }
 
 .grid-book {
-display: grid;
-    grid-template-columns: 0.2fr 1fr!important; row-gap: 40px;margin-top: 20px; padding: 0 20px; border-top: 2px dotted; border-bottom: 2px dotted;
-   
+    display: grid;
+    grid-template-columns: 0.2fr 1fr !important;
+    row-gap: 40px;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 2px dotted;
+    border-bottom: 2px dotted;
+
 
 }
 
@@ -361,7 +399,7 @@ display: grid;
 
 .book-item {
 
-    font-size:1rem;
+    font-size: 1rem;
     color: #ffffff;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
@@ -483,7 +521,7 @@ a {
 }
 
 .material-icons {
-    font-size:2rem;
+    font-size: 2rem;
 }
 
 
@@ -553,6 +591,7 @@ a {
     cursor: grab;
 
 }
+
 /* Animations */
 @keyframes scrollRowOne {
     0% {
@@ -587,12 +626,17 @@ a {
 
     perspective: 1000px;
 }
+
 .image-item {
     position: relative;
-    flex: 0 0 auto; /* Ensure the items don't shrink */
-    width: 200px; /* Adjust as needed */
+    flex: 0 0 auto;
+    /* Ensure the items don't shrink */
+    width: 200px;
+    /* Adjust as needed */
     height: auto;
-    perspective: 1000px;    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+    perspective: 1000px;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth scaling */
 
 }
 
@@ -607,7 +651,7 @@ a {
     color: #ffffff;
     font-size: 1rem;
     font-family: "dotted", sans-serif !important;
-    line-height:1.4;
+    line-height: 1.4;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     box-shadow: inset 0 10px 100px #ffffff;
@@ -624,5 +668,5 @@ a {
     font-family: "dotted", sans-serif !important;
     font-size: 1REM;
     cursor: pointer;
-TOP:20PX
+    TOP: 20PX
 }
