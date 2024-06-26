@@ -281,7 +281,7 @@ div.overlay-text {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(7px);
     box-shadow: inset 0 5px 60px #ffffff;
-    display: flex;
+border:2px dotted #fff;
     text-align: left;
 }
 
