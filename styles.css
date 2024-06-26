@@ -351,7 +351,7 @@ border:2px dotted #fff;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     box-shadow: inset 0 5px 60px #ffffff;
-    border: none;
+border:2px dotted #fff;
     padding: 0 30px
 }
 
