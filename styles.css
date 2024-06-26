@@ -347,7 +347,7 @@ p {
 
 .grid-book {
 display: grid;
-    grid-template-columns: 0.2fr 1fr!important; row-gap: 40px;margin-top: 20px;
+    grid-template-columns: 0.2fr 1fr!important; row-gap: 40px;margin-top: 20px; padding: 0 20px; border-top: 2px dotted; border-bottom: 2px dotted;
    
 
 }
