@@ -350,22 +350,9 @@ p {
 }
 
 .grid-book {
-    display: none;
-    grid-template-columns: 0.3fr 1fr;
-    position: fixed;
-    top: 0;
-    padding: 10%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
-    line-height: 1;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 10px 100px #ffffff;
-    color: #ffffff;
+
+    grid-template-columns: 0.3fr 1fr!important;
+   
 
 }
 
