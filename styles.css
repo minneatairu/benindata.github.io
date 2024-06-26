@@ -199,10 +199,6 @@ div.overlay-text {
     }
 }
 
-div.button-container {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out 4s forwards;
-}
 
 .image-count {
 display:flex;  
