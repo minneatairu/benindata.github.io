@@ -269,7 +269,7 @@ div.overlay-text {
 }
 
 .category-section {
-    position: absolute;
+    position: absolute;width: 70%;
 
     z-index: 50;
 
