@@ -204,7 +204,7 @@ div.overlay-text {
 display:flex;  
     color: #ffffff;
     padding: 10px;
-font-size: 4vw;
+font-size: 1rem;
     font-family: "dotted", sans-serif !important;
 
 }
@@ -489,7 +489,7 @@ a {
 }
 
 .material-icons {
-    font-size: 4vw;
+    font-size:2rem;
 }
 
 
