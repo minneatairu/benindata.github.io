@@ -645,7 +645,7 @@ a {
     font-weight: 800;
     color: #ffffff;
     font-family: "dotted", sans-serif !important;
-    font-size: 6vw;
+    font-size: 1REM;
     cursor: pointer;
-    line-height: 1;
+TOP:20PX
 }
