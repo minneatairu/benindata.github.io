@@ -369,20 +369,7 @@ border:2px dotted #fff;
     margin-bottom:1.5rem;
 }
 
-.range-slider .filteryear {
-    display: none; /* Hide the filter text by default */
-    font-size: 16px;
-    margin-bottom: 10px;
-}
 
-.range-slider:hover .filteryear {
-    display: block; /* Show the filter text when hovering over the range-slider */
-}
-
-.slider-labels span {
-    display: inline-block;
-    margin-right: 20px;
-}
 
 
 p {
