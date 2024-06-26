@@ -264,7 +264,7 @@ font-size: 4vw;
     right: 20px;
     transform: translateY(-50%);
     display: none;
-    font-size: 30px;
+    font-size: 1rem;
 }
 
 .category-button.active .indicator {
@@ -477,7 +477,7 @@ h2 {
 
 a {
     color: #ffffff;
-    text-decoration: underline
+    text-decoration: underline dotted
 }
 
 .button-container button {
