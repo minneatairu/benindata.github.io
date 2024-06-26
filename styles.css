@@ -418,11 +418,14 @@ h2 {
     font-size: 1rem;
     cursor: pointer;
     font-family: "dotted", sans-serif !important;
-    border: none;padding: 20px 0;
+
     background-color: transparent;
     color: #ffffff;
     border-radius: 5px;
-
+    border: 2px dotted;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 20px;
     text-transform: uppercase;
 }
 
