@@ -37,7 +37,7 @@ div.category-section.hidden {
 .flip-card {
     height: 70%;
     z-index: 99999;
-    padding: 0 2rem;     border-top: 1px solid red;padding-top: 3rem;
+    padding: 0 2rem;     border-top: 1px solid #ffffff;padding-top: 3rem;
 }
 
 .flip-card-inner {
@@ -69,7 +69,7 @@ div.category-section.hidden {
     position: absolute;
     top: 5px;
     left: 5px;
-    color: red;
+    color: #ffffff;
     font-family: "dotted", sans-serif !important;
 }
 
@@ -81,13 +81,13 @@ div.category-section.hidden {
     transform: rotateY(180deg);
 }
 
-img {border: 1px solid red ;}
+img {border: 1px solid #ffffff ;}
 .caption {
-
-    color: red;
+font-size: 1rem;
+    color: #ffffff;
     text-align: center;opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease-in-out; /* Smooth transition */
-    color: red;    display: none; /* Initially hide the caption */
+    color: #ffffff;    display: none; /* Initially hide the caption */
 
     text-align: center;
 
@@ -124,7 +124,7 @@ img {border: 1px solid red ;}
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;
+    box-shadow: inset 0 5px 60px #ffffff;
 
 }
 
@@ -174,7 +174,7 @@ div.overlay-text {
 #benin {
     font-size: 24vw;
     /* Full-screen width font size for Benin */
-    color: red;
+    color: #ffffff;
     text-align: center;
     line-height: 0.8;
     margin: 0;
@@ -206,7 +206,7 @@ div.button-container {
 
 .image-count {
 display:flex;  
-    color: red;
+    color: #ffffff;
     padding: 10px;
 font-size: 4vw;
     font-family: "dotted", sans-serif !important;
@@ -216,7 +216,7 @@ font-size: 4vw;
 
 #dataset {
     font-size: 22vw;
-    color: red;
+    color: #ffffff;
     text-align: center;
     line-height: 0.8;
     font-family: "dotted", sans-serif !important;
@@ -255,7 +255,7 @@ font-size: 4vw;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(7px);
-    box-shadow: inset 0 5px 60px red;
+    box-shadow: inset 0 5px 60px #ffffff;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -294,14 +294,14 @@ font-size: 4vw;
     margin-right: 20px;
     flex: 1;
     padding: 10px;
-    color: red;
+    color: #ffffff;
     font-size: 5vw;
     border: none;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;
+    box-shadow: inset 0 5px 60px #ffffff;
 
 
 }
@@ -311,22 +311,22 @@ font-size: 4vw;
     font-size: 5vw;
     width: 100%;
     border: none;
-    background: red;
+    background: #ffffff;
 
 
-    color: red
+    color: #ffffff
 }
 
 .search-section button {
     padding: 10px;
     font-size: 5vw;
-    color: red;
+    color: #ffffff;
     border-radius: 30px;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;
+    box-shadow: inset 0 5px 60px #ffffff;
     border: none;
     padding: 0 30px
 }
@@ -368,14 +368,14 @@ p {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
-    box-shadow: inset 0 10px 100px red;
-    color: red;
+    box-shadow: inset 0 10px 100px #ffffff;
+    color: #ffffff;
     row-gap: 50px;
 
 }
 
 ::placeholder {
-    color: red;
+    color: #ffffff;
     opacity: 1;
     font-weight: 800;
     padding-left: 20px;
@@ -384,14 +384,14 @@ p {
 .book-item {
 
     font-size: 5vw;
-    color: red;
+    color: #ffffff;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
 }
 
 h2 {
     font-family: "dotted", sans-serif !important;
-    color: red;
+    color: #ffffff;
     font-size: 5vw;
     LINE-HEIGHT: 1;
     MARGIN-BLOCK-END: 0;
@@ -405,7 +405,7 @@ h2 {
     font-family: "dotted", sans-serif !important;
     border: none;
     background-color: transparent;
-    color: red;
+    color: #ffffff;
     border-radius: 5px;
     font-weight: 800;
     text-transform: uppercase;
@@ -481,7 +481,7 @@ h2 {
 }
 
 a {
-    color: red;
+    color: #ffffff;
     text-decoration: underline
 }
 
@@ -490,7 +490,7 @@ a {
     font-size: 4vw;
     cursor: pointer;
     border: none;
-    color: red;
+    color: #ffffff;
     font-family: "dotted", sans-serif !important;
     background: transparent;
     display: flex;
@@ -515,7 +515,7 @@ a {
     -webkit-appearance: none;
     width: 100%;
     height: 1px;
-    background: red;
+    background: #ffffff;
     outline: none;
     opacity: 0.7;
     transition: opacity .2s;
@@ -526,7 +526,7 @@ a {
     appearance: none;
     width: 15px;
     height: 15px;
-    background: red;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 50%;
 }
@@ -534,7 +534,7 @@ a {
 .range-slider .slider::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background: red;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 50%;
 }
@@ -547,7 +547,7 @@ a {
     width: 100%;
     text-align: center;
     z-index: 100;
-    color: red;
+    color: #ffffff;
     font-family: "dotted", sans-serif !important;
 }
 
@@ -628,13 +628,13 @@ a {
 .modal-content {
 
     padding: 8%;
-    color: red;
+    color: #ffffff;
     font-size: 5vw;
     font-family: "dotted", sans-serif !important;
     line-height: 0.9;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
-    box-shadow: inset 0 10px 100px red;
+    box-shadow: inset 0 10px 100px #ffffff;
 }
 
 
@@ -644,7 +644,7 @@ a {
     left: 20px;
     font-size: 28px;
     font-weight: 800;
-    color: red;
+    color: #ffffff;
     font-family: "dotted", sans-serif !important;
     font-size: 6vw;
     cursor: pointer;
