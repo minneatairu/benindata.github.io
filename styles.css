@@ -366,7 +366,7 @@ border:2px dotted #fff;
 }
 
 .category-section h2 {
-    margin-bottom:1.5rem;
+    margin: 0;
 }
 
 
@@ -523,8 +523,7 @@ a {
 }
 
 .material-icons {
-    font-size: 1.5rem;
-    padding-top: 2px;
+    font-size: 2rem;
 }
 
 
