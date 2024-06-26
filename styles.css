@@ -370,8 +370,8 @@ display: grid;
 h2 {
     font-family: "dotted", sans-serif !important;
     color: #ffffff;
-    font-size: 5vw;
-    LINE-HEIGHT: 1;
+    font-size: 1rem;
+
     MARGIN-BLOCK-END: 0;
 }
 
