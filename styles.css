@@ -382,9 +382,8 @@ p {
     grid-template-columns: 0.2fr 1fr !important;
     row-gap: 40px;
     margin-top: 20px;
-    padding: 20px 0;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    padding: 50px 0;
+   
 
 
 }
