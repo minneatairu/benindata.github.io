@@ -463,7 +463,7 @@ a {
 }
 
 .button-container button {
-    padding: 10px 20px;
+    padding: 0 20px;
     font-size: 2rem;
     cursor: pointer;
     border: none;
@@ -472,7 +472,6 @@ a {
     background: transparent;
     display: flex;
     z-index: 999;
-    line-height: 1;
     font-weight: 800;
 
 
