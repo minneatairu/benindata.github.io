@@ -76,7 +76,7 @@ div.category-section.hidden {
 .flip-card-front {
     z-index: 99999;
 }
-
+p{text-align: justify;}
 .flip-card-back {
     transform: rotateY(180deg);
 }
