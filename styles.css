@@ -332,7 +332,7 @@ font-size: 1rem;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
-
+#imageCount {padding-right: 10px;}
 .category-section h2 {
     margin: 0;
 }
