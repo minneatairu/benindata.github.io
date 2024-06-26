@@ -370,7 +370,6 @@ p {
     backdrop-filter: blur(5px);
     box-shadow: inset 0 10px 100px #ffffff;
     color: #ffffff;
-    row-gap: 50px;
 
 }
 
@@ -383,7 +382,7 @@ p {
 
 .book-item {
 
-    font-size: 5vw;
+    font-size:1rem;
     color: #ffffff;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
