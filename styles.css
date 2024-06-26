@@ -227,8 +227,8 @@ font-size: 4vw;
 
 
 .text {
-    font-size: 5vw !important;
-    line-height: 0.9;
+    font-size: 1rem !important;
+    line-height: 1.2;
     font-weight: 400 !important;
 }
 
@@ -237,7 +237,7 @@ font-size: 4vw;
     text-align: right;
     cursor: pointer;
     font-family: "dotted", sans-serif !important;
-    font-size: 6VW;
+    font-size: 1rem;
     position: absolute;
     left: 20px;
     font-weight: 800;
