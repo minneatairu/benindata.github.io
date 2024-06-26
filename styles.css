@@ -37,7 +37,7 @@ div.category-section.hidden {
 .flip-card {
     height: 70%;
     z-index: 99999;
-    padding: 0 2rem;     border-top: 1px dotted #ffffff;padding-top: 3rem;
+    padding: 0 2rem;     border-top: 2px dotted #ffffff;padding-top: 3rem;
 }
 
 .flip-card-inner {
@@ -81,7 +81,7 @@ div.category-section.hidden {
     transform: rotateY(180deg);
 }
 
-img {border: 1px dotted #ffffff ;}
+img {border: 2px dotted #ffffff ;}
 .caption {
 font-size: 1rem;
     color: #ffffff;
@@ -347,7 +347,7 @@ p {
 
 .grid-book {
 display: grid;
-    grid-template-columns: 0.3fr 1fr!important;
+    grid-template-columns: 0.2fr 1fr!important; row-gap: 40px;margin-top: 20px;
    
 
 }
