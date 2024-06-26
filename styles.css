@@ -67,7 +67,7 @@ div.category-section.hidden {
 
 .index-number {line-height: 1;
     position: absolute;
-    top: 5px;
+    top: 5px;font-size: 1rem;
     left: 5px;
     color: #ffffff;
     font-family: "dotted", sans-serif !important;
