@@ -94,7 +94,7 @@ p {
 }
 
 img {
-    border:  solid red;
+    border: 1px solid red;
 }
 
 .caption {
@@ -281,7 +281,7 @@ div.overlay-text {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(7px);
     box-shadow: inset 0 5px 60px red;
-border: solid red;
+border:1px solid red;
     text-align: left;
 }
 
@@ -421,7 +421,7 @@ margin-bottom: 1.5rem;
     background-color: transparent;
     color: red;
     border-radius: 5px;
-    border:  solid;
+    border:1px  solid;
     border-radius: 20px;
     padding: 10px 20px;
     margin: 20px;
