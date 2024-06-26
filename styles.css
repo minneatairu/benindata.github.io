@@ -37,7 +37,7 @@ div.category-section.hidden {
 .flip-card {
     height: 70%;
     z-index: 99999;
-    padding: 0 2rem;     border-top: 1px solid #ffffff;padding-top: 3rem;
+    padding: 0 2rem;     border-top: 1px dotted #ffffff;padding-top: 3rem;
 }
 
 .flip-card-inner {
@@ -81,7 +81,7 @@ div.category-section.hidden {
     transform: rotateY(180deg);
 }
 
-img {border: 1px solid #ffffff ;}
+img {border: 1px dotted #ffffff ;}
 .caption {
 font-size: 1rem;
     color: #ffffff;
