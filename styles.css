@@ -502,7 +502,7 @@ a {
 
 .button-container button {
     padding: 0 20px;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
     border: none;
     color: #ffffff;
@@ -510,7 +510,7 @@ a {
     background: transparent;
     display: flex;
     z-index: 999;
-    font-weight: 800;
+
 
 
 }
