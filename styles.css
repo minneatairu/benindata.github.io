@@ -540,7 +540,7 @@ a {
 .range-slider .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: ;
+    height: 1px;
     background: red;
     outline: none;
     opacity: 0.7;
