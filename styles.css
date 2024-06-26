@@ -8,7 +8,12 @@ body {
     align-items: center;
     background-color: #000;
 }
-
+@font-face {
+    font-family: 'dotted';
+    src: url('dot.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 
@@ -65,7 +70,7 @@ div.category-section.hidden {
     top: 5px;
     left: 5px;
     color: red;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 }
 
 .flip-card-front {
@@ -114,7 +119,7 @@ img {border: 1px solid red ;}
     align-items: center;
     flex-direction: column;
     z-index: 1000;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     transition: opacity 1s ease-out;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -177,7 +182,7 @@ div.overlay-text {
     opacity: 0;
     animation: fadeOutDelay 5s ease-in-out forwards;
     /* Animation duration of 10 seconds */
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 }
 
 .search-field::placeholder {
@@ -204,7 +209,7 @@ display:flex;
     color: red;
     padding: 10px;
 font-size: 4vw;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 
 }
 
@@ -214,7 +219,7 @@ font-size: 4vw;
     color: red;
     text-align: center;
     line-height: 0.8;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -231,7 +236,7 @@ font-size: 4vw;
     grid-column: span 2;
     text-align: right;
     cursor: pointer;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     font-size: 6VW;
     position: absolute;
     left: 20px;
@@ -257,7 +262,7 @@ font-size: 4vw;
 }
 
 .category-button .indicator {
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     position: absolute;
     top: 28%;
     right: 20px;
@@ -275,12 +280,12 @@ font-size: 4vw;
     margin-bottom: 20px;
     display: flex;
     border-radius: 20px;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 
 }
 
 .caption {
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 }
 
 .search-section input {
@@ -292,7 +297,7 @@ font-size: 4vw;
     color: red;
     font-size: 5vw;
     border: none;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
@@ -317,7 +322,7 @@ font-size: 4vw;
     font-size: 5vw;
     color: red;
     border-radius: 30px;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
@@ -380,12 +385,12 @@ p {
 
     font-size: 5vw;
     color: red;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     font-weight: 800;
 }
 
 h2 {
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     color: red;
     font-size: 5vw;
     LINE-HEIGHT: 1;
@@ -397,7 +402,7 @@ h2 {
     font-size: 8vw;
     line-height: 0.8;
     cursor: pointer;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     border: none;
     background-color: transparent;
     color: red;
@@ -461,7 +466,7 @@ h2 {
 
     height: 100%;
     overflow: auto;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 }
 
 
@@ -486,7 +491,7 @@ a {
     cursor: pointer;
     border: none;
     color: red;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     background: transparent;
     display: flex;
     z-index: 999;
@@ -543,7 +548,7 @@ a {
     text-align: center;
     z-index: 100;
     color: red;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
 }
 
 .range-slider .slider {
@@ -625,7 +630,7 @@ a {
     padding: 8%;
     color: red;
     font-size: 5vw;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     line-height: 0.9;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
@@ -640,7 +645,7 @@ a {
     font-size: 28px;
     font-weight: 800;
     color: red;
-    font-family: "Jaro", sans-serif !important;
+    font-family: "dotted", sans-serif !important;
     font-size: 6vw;
     cursor: pointer;
     line-height: 1;
