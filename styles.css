@@ -325,7 +325,7 @@ div.overlay-text {
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px #ffffff;
+    box-shadow: inset 0 5px 60px #ffffff;border:2px dotted #fff
 
 
 }
