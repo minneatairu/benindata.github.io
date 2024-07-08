@@ -302,7 +302,6 @@ border:2px dashed red;
     width: 100%;
     margin-bottom: 20px;
     display: flex;
-    border-radius: 20px;
     font-family: "dotted", sans-serif !important;
 
 }
@@ -313,7 +312,6 @@ border:2px dashed red;
 
 .search-section input {
     background: black;
-    border-radius: 30px;
     margin-right: 20px;
     flex: 1;
     padding: 30px;
@@ -418,7 +416,6 @@ margin-bottom: 1.5rem;
     background-color: transparent;
     color: red;
     border:2px dashed;
-    border-radius: 20px;
     padding: 10px 20px;
     margin: 20px;
     text-transform: uppercase;
@@ -550,7 +547,6 @@ a {
     height: 15px;
     background: red;
     cursor: pointer;
-    border-radius: 50%;
 }
 
 .range-slider .slider::-moz-range-thumb {
@@ -558,7 +554,6 @@ a {
     height: 15px;
     background: red;
     cursor: pointer;
-    border-radius: 50%;
 }
 
 .range-slider {
