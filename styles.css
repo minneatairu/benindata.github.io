@@ -354,7 +354,7 @@ border:2px dashed red;
 .filter-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
 }
 
 #imageCount {
