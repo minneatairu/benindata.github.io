@@ -94,7 +94,7 @@ p {
 }
 
 img {
-    border: 1px solid red;
+    border: 2px dashed red;
 }
 
 .caption {
@@ -276,12 +276,11 @@ div.overlay-text {
 }
 
 .category-border {
-    border-radius: 30px;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(7px);
     box-shadow: inset 0 5px 60px red;
-border:1px solid red;
+border:2px dashed red;
     text-align: left;
 }
 
@@ -325,7 +324,7 @@ border:1px solid red;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    box-shadow: inset 0 5px 60px red;border:1px solid red
+    box-shadow: inset 0 5px 60px red;border:2px dashed red
 
 
 }
@@ -345,13 +344,12 @@ border:1px solid red;
     padding: 10px;
     font-size:1rem;
     color: red;
-    border-radius: 30px;
     font-family: "dotted", sans-serif !important;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     box-shadow: inset 0 5px 60px red;
-border:1px solid red;
+border:2px dashed red;
     padding: 0 30px
 }
 
@@ -419,8 +417,7 @@ margin-bottom: 1.5rem;
 
     background-color: transparent;
     color: red;
-    border-radius: 5px;
-    border:1px  solid;
+    border:2px dashed;
     border-radius: 20px;
     padding: 10px 20px;
     margin: 20px;
