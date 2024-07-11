@@ -41,7 +41,7 @@ div.category-section.hidden {
     height: 70%;
     z-index: 99999;
     padding: 0 2rem;
-    border-top:  2px dashed red;
+    border-top:  1px solid red;
     padding-top: 3rem;
 }
 
@@ -94,7 +94,7 @@ p {
 }
 
 img {
-    border: 2px dashed red;
+    border: 1px solid red;
 }
 
 .caption {
