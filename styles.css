@@ -214,7 +214,7 @@ div.overlay-text {
     font-family: "dotted", sans-serif !important;
 }
 
-.ch-field::placeholder {
+.search-field::placeholder {
     color: black;
 }
 
@@ -327,7 +327,7 @@ border:1px solid red;
 
 }
 
-.ch-field {
+.search-field {
     padding: 10px;
     font-size: 5vw;
     width: 100%;
@@ -338,7 +338,7 @@ border:1px solid red;
     color: red
 }
 
-.ch-section button {
+.search-section button {
     padding: 10px;
     font-size:1rem;
     color: red;
